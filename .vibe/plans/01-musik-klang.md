@@ -281,7 +281,7 @@ Keine Klänge, keine Bilder von Instrumenten, keine Band, kein Chor.
       change: change the pattern first.
       Creator: ja
 - [x] Kapitel orchester: Wiederholungsseite das-brauchst-du (recap klangquellen-unterscheiden, schwingung)
-- [ ] Seite orchester/saiten-und-blasinstrumente: Datendatei instrumente.yaml, Familien-Baum, generated Untergruppe, matching, multiple-choice, single-choice
+- [x] Seite orchester/saiten-und-blasinstrumente: Datendatei instrumente.yaml, Familien-Baum, generated Untergruppe, matching, multiple-choice, single-choice
 - [ ] Seite orchester/weitere-instrumente: generated Gruppe und tonerzeugend/geräuscherzeugend, matching Material, true-false
 - [ ] Seite orchester/instrumente-im-orchester: generated Orchester ja/nein, matching Orchestergruppe, multiple-choice, number; Selbsteinschätzung des Kapitels
 <!-- tasks: pages (4 added): the other pages or screens, after the pattern -->

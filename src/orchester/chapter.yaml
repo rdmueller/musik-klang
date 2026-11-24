@@ -1,4 +1,4 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Instrumente und Orchester
 summary: Instrumente nach der Tonerzeugung einordnen, die Instrumente des Sinfonieorchesters und seine Sitzordnung.
-pages: [das-brauchst-du, sitzordnung]
+pages: [das-brauchst-du, saiten-und-blasinstrumente, sitzordnung]
