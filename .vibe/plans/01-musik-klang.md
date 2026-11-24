@@ -2,7 +2,7 @@
 # Read by the hooks, the review, the evals. Schema: @lernapps/tooling/guidance/plan-front-matter.v1.schema.json
 # Written by `lernapps plan` and the hooks. Never change a key or a value by hand.
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
-archetype: null
+archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
 phase: explore
 # prePushFailures: failed pre-push runs, written by the hook.
@@ -25,11 +25,15 @@ For you, the assistant. The process is in AGENTS.md; this plan holds the method.
 
 ## Goal
 
-<!-- 1–2 sentences: what learners do, what they learn. -->
+Lernende der 8. Klasse ordnen Instrumente nach ihrer Tonerzeugung in Gruppen und Untergruppen, erkennen die
+Instrumente des Sinfonieorchesters und beschriften seine Sitzordnung. Ein Probetest zeigt, was für die Lernkontrolle
+sitzt.
 
 ## Key decisions
 
-<!-- One line each: decision and reason. Archetype first. Your own choice without the creator: mark "(guess)". -->
+- Archetyp `explainer` wie die Schwester-Apps: Erklärseiten, Zuordnen mit immer neuen Instrumenten, Sitzplan als
+  beschriftete Figur, Selbsteinschätzung als Probetest; ohne eigene Komponente.
+- Name `musik-klang`: Schema `musik-<Strang>`.
 
 ## Notes
 
@@ -49,7 +53,55 @@ abgeleitet, ohne Wortlaut:
   `ensembles-besetzungen` (Schritt 4); Voraussetzungen `klangquellen-unterscheiden`, `schwingung` → Wiederholung.
 - Keine dieser Kompetenzen übt bisher eine App.
 
-<!-- Strand or subject, competencies by chapter (ids), didactic approach, scope, sources and licences, open questions. -->
+### Wie die Lernenden üben (Skill `lernapps-exercise-patterns`)
+
+- Zuordnen (Instrument ↔ Gruppe/Untergruppe): `matching`, `generated` mit Auswahl aus einer Datendatei der
+  Instrumente (immer neue Instrumente), `multiple-choice` („Welche gehören ins Orchester?“).
+- Entscheiden: tonerzeugend oder geräuscherzeugend; gehört ins Orchester oder nicht (`generated`, `true-false`).
+- Sitzordnung: eigener Sitzplan als SVG (selbst gezeichnet), als `labelled-figure` mit Buchstaben und `matching`
+  aus dem Material (`pairsFrom: material`): jeder Buchstabe eine Gruppe; dazu `ordering` (von vorn nach hinten).
+- Keine eigene Komponente nötig: eingebaute Blöcke reichen.
+- Fehler, die die Rückmeldung abfängt: Saxophon und Querflöte als Blechblasinstrument (sie sind aus Metall, zählen
+  aber nach der Tonerzeugung zu den Holzblasinstrumenten); Harfe als Streichinstrument; Klavier als
+  Saiteninstrument statt Tasteninstrument (in dieser Einteilung); Pauken als geräuscherzeugend; Bratsche und Cello
+  im Sitzplan vertauscht; Hörner zu den Holzbläsern.
+
+### Strang und Kompetenzen (ein Kapitel `orchester`)
+
+Strang `musik/klang`. Sätze wörtlich von der Karte.
+- Wiederholung `das-brauchst-du`: recap `klangquellen-unterscheiden` („Ich kann Stimme, Körper, Gegenstände und
+  Instrumente als Klangquellen unterscheiden.“), `schwingung` („Ich kann erklären, dass jeder Klang durch eine
+  Schwingung entsteht.“).
+- `instrumentenfamilien` – Ich kann Instrumente nach der Art, wie sie klingen, in Familien einordnen. → zwei Seiten:
+  `saiten-und-blasinstrumente`, `weitere-instrumente` (Tasten, Schlag, Harmonika, elektronisch).
+- `ensembles-besetzungen` – Ich kann Besetzungen wie Sinfonieorchester, Band oder Chor erkennen und ihre Instrumente
+  oder Stimmen nennen. → zwei Seiten: `instrumente-im-orchester`, `sitzordnung` (nur Sinfonieorchester).
+
+### Didaktik
+
+- Familien nach der Tonerzeugung herleiten (streichen, zupfen, Luft an einer Kante oder einem Rohrblatt, Lippen im
+  Kesselmundstück, schlagen, Tasten, durchschlagende Zunge, Strom), nicht nach dem Material: darum ist das Saxophon
+  ein Holzblasinstrument.
+- Schlaginstrumente: Material (Holz, Metall, Fell) und tonerzeugend (bestimmte Tonhöhe) oder geräuscherzeugend.
+- Orchester: vier Gruppen (Streicher, Holzbläser, Blechbläser, Pauken/Schlagwerk), Instrumente je Gruppe.
+- Sitzordnung: Streicher vorn im Halbkreis, Holzbläser hinten links, Blechbläser hinten rechts, Pauken ganz hinten,
+  Dirigent vorn; Grund: leise Instrumente vorn, laute hinten (guess, als Merkhilfe).
+
+### Umfang
+
+- Drin: die sechs Gruppen mit Untergruppen und den Instrumenten des Materials; Orchesterinstrumente; Sitzordnung
+  wie im Material (amerikanische Aufstellung: 2. Violinen neben den 1.).
+- Draußen: Band, Chor, Klänge hören, Bilder der Instrumente; deutsche Aufstellung nur als Hinweis (guess).
+
+### Quellen (geöffnet 2026-11-24, CC BY-SA 4.0; nur Fakten)
+
+- Lernlandkarte Musik, https://lernapps.net/apps/map/musik.json – verified.
+- „Holzblasinstrument“, „Blechblasinstrument“, „Streichinstrument“, „Zupfinstrument“, „Schlaginstrument“,
+  „Harmonikainstrument“ (https://de.wikipedia.org/wiki/…) – Einteilung nach der Tonerzeugung, Saxophon und Querflöte
+  als Holzblasinstrumente – verified.
+- „Orchester“ (https://de.wikipedia.org/wiki/Sinfonieorchester) und „Amerikanische Aufstellung“
+  (https://de.wikipedia.org/wiki/Amerikanische_Aufstellung) – Gruppen, 2. Violinen neben den 1. – verified; die
+  Plätze von Bläsern und Pauken stehen dort nicht, die App folgt dem Material des Erstellers.
 
 ## Explore
 
@@ -66,27 +118,29 @@ abgeleitet, ohne Wortlaut:
       their own address, free and public, and once listed as a copy on lernapps.net. Say that the technical part
       (GitHub) comes at the end and that you do it.
 - [x] Interview: ask the topics "Goal" and "Learners" of "Answers".
-- [ ] Load skill `lernapps-map-assignment` and read the learning map of the subject as it says. The creator brings
+- [x] Load skill `lernapps-map-assignment` and read the learning map of the subject as it says. The creator brings
       the content themselves (material, a word list, the pages): note under "Notes" which competencies of the map it
       covers. Else write the skill's assignment, with its story; the creator's yes answers the topics Content and
       Amount. A subject without a map: skip this task and say so.
-- [ ] Load skill `lernapps-exercise-patterns` and read its reference for the subject. Note under "Notes" how learners
+- [x] Load skill `lernapps-exercise-patterns` and read its reference for the subject. Note under "Notes" how learners
       will practise what the goal names.
-- [ ] Choose the archetype as skill `lernapps-app` says: read the README of each archetype in question, then tell the
+- [x] Choose the archetype as skill `lernapps-app` says: read the README of each archetype in question, then tell the
       creator in plain words what the chosen one can and cannot do. Write the archetype and its reason under "Key
       decisions".
-- [ ] Run `npx --no -- lernapps skills --archetype <name>` with the chosen archetype. It installs the archetype's
+- [x] Run `npx --no -- lernapps skills --archetype <name>` with the chosen archetype. It installs the archetype's
       skills and adds the archetype's tasks to this plan.
-<!-- archetype: explore -->
-- [ ] Interview: ask every other topic of "Answers", in order. Leave out only a topic that an answer of the creator
+- [x] Load skill `lernapps-explainer-design`. An explainer has the look of the runtime: write "fixed by the
+      archetype" under the topic "Look and feel" of "Answers".
+- [x] Interview: ask every other topic of "Answers", in order. Leave out only a topic that an answer of the creator
       already covers, and note which answer. A topic nobody answered is asked once before you write an assumption
       with "(guess)".
-- [ ] Load skill `lernapps-content-research` and research as it says. Write under "Notes": the strand or subject, the
+- [x] Load skill `lernapps-content-research` and research as it says. Write under "Notes": the strand or subject, the
       competencies by chapter with their ids, the sources you opened.
-<!-- archetype: explore-structure -->
-- [ ] Write under "Notes", one line per competency: how learners get there (they derive it, they do not only read it
+- [x] Write under "Notes" which competency goes on which page and which pages form a chapter, as "Map the content" of
+      skill `lernapps-explainer-design` says. Per page, name the prerequisites the app does not practise.
+- [x] Write under "Notes", one line per competency: how learners get there (they derive it, they do not only read it
       off), and which misconception the feedback catches.
-- [ ] Write under "Notes" the scope: what is in, what is out and why, the data range (for example "all main-group
+- [x] Write under "Notes" the scope: what is in, what is out and why, the data range (for example "all main-group
       elements", never a silent "1–20"), the languages.
 - [ ] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
       approach, the scope, every "(guess)", the sources and what is unchecked, the archetype and its reason. Stop and
@@ -102,12 +156,17 @@ abgeleitet, ohne Wortlaut:
 - Learners: subject, school year, prior knowledge.
   - „Gymnasium, 8. Klasse, hessen, Musik“; „Vorwissen ist alles aus der Klasse 7. Was das ist, weiss ich nicht“.
 - Model and focus: an app of the catalog (https://lernapps.net/apps/llms.txt) as model; what matters most (exercises,
+  - Abgedeckt durch die Antwort zur ersten App: „all diese Sachen sind mir wichtig.“ Vorbild: die Schwester-Apps (guess).
   visualisations, game feel).
 - Hurdles: misconceptions and mistakes of the learners; the creator's examples and experiments.
 - Content: who writes it (creator, you, from sources); own material (worksheets, tests).
+  - Material des Erstellers (zwei Arbeitsblätter, lokal). Vorschlag mit fünf Seiten und Untergruppen der Schlaginstrumente „aus Holz, aus Metall, mit Fell“ – Antwort: „passt so“. Inhalte schreibe ich aus Quellen nach dem Aufbau des Materials.
 - Amount: how much content in the first version; what comes later.
+  - Fünf Seiten, ein Kapitel, nur Sinfonieorchester, keine Band, kein Chor: „passt so“.
 - Languages: German only, or German and English. Never English only.
+  - Abgedeckt durch die Antwort zur ersten App: „nur Deutsch“.
 - Look and feel: calm like a worksheet, or like a game (colours, praise, effects); dark mode.
+  - fixed by the archetype (explainer)
 - Terms: the creator's words for the main things in the app, used everywhere.
 - Finding the app: what teachers and parents would search for.
 
@@ -120,10 +179,11 @@ abgeleitet, ohne Wortlaut:
 
 ### Tasks
 
-- [ ] Map the content as "Map the content" of skill `lernapps-<archetype>-design` says, and write the result under
+- [ ] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
       "Content method".
 - [ ] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
-<!-- archetype: plan -->
+- [ ] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
+      opening task, the change of activity, the reward, the story.
 - [ ] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
       screen, `npx --no -- lernapps plan add --at pattern "<task>"`. Then the others, one call each:
       `npx --no -- lernapps plan add --at pages "<task>"`. Each task says what it builds and what it shows.
@@ -138,7 +198,9 @@ abgeleitet, ohne Wortlaut:
 
 <!-- One line each: the patterns and where; the figures and how they are made; the data files; each component, what it
 checks and what it cannot; how a later agent adds a chapter. It becomes the content guide in Code. -->
-<!-- archetype: content-method -->
+<!-- An explainer: per figure, model and component its learning action in two to four sentences
+(`explainer-representation-explained`); per page its prerequisites the app does not practise, and which get a recap
+page, which a link. -->
 
 ## Code
 
@@ -153,11 +215,16 @@ checks and what it cannot; how a later agent adds a chapter. It becomes the cont
 ### Tasks
 
 - [ ] Load skill `lernapps-cli`. Create the app as its section "Create" says:
-      `npx --no -- lernapps create --archetype <archetype>`.
+      `npx --no -- lernapps create --archetype explainer`.
 - [ ] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method": every heading,
       no "FILL IN" left. Commit it before any content.
-- [ ] Load skill `lernapps-<archetype>`.
-<!-- archetype: code-start -->
+- [ ] Load skill `lernapps-explainer`.
+- [ ] Load skill `lernapps-content-questions`. Read whole, with your file tool:
+      `.agents/skills/lernapps-explainer/references/blocks.md` and
+      `.agents/skills/lernapps-explainer/references/exercises.md`. A foreign language: also
+      `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
+- [ ] Decide whether the app needs `scope`, as "`scope`" in
+      `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 <!-- tasks: pattern: the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
@@ -180,7 +247,8 @@ checks and what it cannot; how a later agent adds a chapter. It becomes the cont
 
 ### Tasks
 
-<!-- archetype: commit-start -->
+- [ ] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
+      decisions" why the app has none. Commit.
 - [ ] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
       every click only the creator can make, in one message.
 - [ ] Push `work`, open the preview pull request and see its checks to green, as skill `lernapps-github` says.
