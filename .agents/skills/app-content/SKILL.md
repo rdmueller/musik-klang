@@ -48,8 +48,12 @@ Ein Kapitel `orchester`; Ids und Sätze wörtlich von `https://lernapps.net/apps
 
 ## Exercise patterns
 
-- **Instrument einordnen**: `generated` aus `src/data/instrumente.yaml`, `compare: choice` mit den Gruppen- oder
-  Untergruppennamen; Fehler: die naheliegende falsche Gruppe (Feld `falsch`) mit Meldung (Feld `warum`).
+- **Instrument einordnen**: `generated` aus `src/data/instrumente.yaml` (Felder `name`, `gruppe`, `untergruppe`,
+  `falsch`, `warum`, `orchester` ja/nein/manchmal, `ton` tonerzeugend/geräuscherzeugend/„-“), `compare: choice`:
+  `saiten-und-blasinstrumente#untergruppe-bestimmen` (Saiten und Blas, Fehler `falsch` mit Meldung `warum`),
+  `weitere-instrumente#gruppe-bestimmen` (Tasten, Harmonika, elektronisch; Schlaginstrumente ausgenommen, weil
+  ihr `falsch` ein Material ist), `weitere-instrumente#ton-oder-geraeusch`, `instrumente-im-orchester#im-orchester`
+  (ohne „manchmal“).
 - **Zuordnen**: `matching` (Tonerzeugung ↔ Untergruppe, Instrument ↔ Orchestergruppe, Schlaginstrument ↔ Material).
 - **Auswählen, entscheiden**: `multiple-choice`, `single-choice` mit typischem Fehler als Option, `true-false`.
 - **Sitzplan beschriften**: `matching` mit `pairsFrom: material` aus einer `labelled-figure` (`sitzplan-leer.svg`,
@@ -61,7 +65,8 @@ Ein Kapitel `orchester`; Ids und Sätze wörtlich von `https://lernapps.net/apps
   `src/images/sitzplan-leer.svg` (einfarbig, für Aufgaben), selbst gezeichnet, CC BY 4.0: Bühne von oben, Dirigent
   vorn, Streicher im inneren Halbkreis, Holzbläser hinten links, Blechbläser hinten rechts, Pauken ganz hinten. Die
   Markierungen setzt die `labelled-figure` (x/y in Prozent, siehe die Seite `sitzordnung`).
-- `src/images/familien.svg`: Baum der Gruppen und Untergruppen aus Text-Kästen, selbst gezeichnet, CC BY 4.0.
+- `src/images/familien.svg`: die sechs Gruppen als farbige Kästen mit Untergruppen, selbst gezeichnet, CC BY 4.0;
+  auf `saiten-und-blasinstrumente` und `weitere-instrumente`.
 - Keine Bilder von Instrumenten. Farben nie allein: die Legende nennt die Gruppen.
 
 ## Sources
