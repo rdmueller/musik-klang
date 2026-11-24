@@ -1,0 +1,42 @@
+{
+  "format": 1,
+  "strand": "musik/klang",
+  "pages": [
+    {
+      "path": "orchester/das-brauchst-du/",
+      "title": "Das brauchst du hier",
+      "recap": [
+        "musik/klangquellen-unterscheiden",
+        "musik/schwingung"
+      ]
+    },
+    {
+      "path": "orchester/saiten-und-blasinstrumente/",
+      "title": "Saiten- und Blasinstrumente",
+      "competencies": [
+        "instrumentenfamilien"
+      ]
+    },
+    {
+      "path": "orchester/weitere-instrumente/",
+      "title": "Tasten-, Schlag-, Harmonika- und elektronische Instrumente",
+      "competencies": [
+        "instrumentenfamilien"
+      ]
+    },
+    {
+      "path": "orchester/instrumente-im-orchester/",
+      "title": "Instrumente im Sinfonieorchester",
+      "competencies": [
+        "ensembles-besetzungen"
+      ]
+    },
+    {
+      "path": "orchester/sitzordnung/",
+      "title": "Die Sitzordnung im Orchester",
+      "competencies": [
+        "ensembles-besetzungen"
+      ]
+    }
+  ]
+}
