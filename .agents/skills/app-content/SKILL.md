@@ -5,59 +5,88 @@ description: Use for any content work in this app - researching, writing, extend
 
 # Content guide of this app
 
-<!--
-Skeleton. Delete this comment when you fill the guide.
-- When: after the plan is confirmed, before any content. Replace every placeholder comment below; none may remain
-  (`lernapps check`, rule app-content-guide, fails once the plan is in Commit).
-- Keep the headings.
-- Concrete, for an agent without your conversation: files, ids, data files, one example.
-  - No: "Use varied exercises with figures where they help."
-  - Yes: "Every page ends with section `uebung`: one `generated` exercise of pattern 'Ohmsches Gesetz' from
-    `src/data/widerstaende.yaml`, one `matching` of symbols and parts."
-- Content decision changes → update this file in the same commit.
-- Public: no personal data, no goals of one learner.
--->
+Orchesteraufbau: Instrumentengruppen nach der Tonerzeugung, Instrumente des Sinfonieorchesters, Sitzordnung.
+Wiederholung vor einer Lernkontrolle in Klasse 8; die Selbsteinschätzung ist der Probetest. Archetyp `explainer`,
+Strang `musik/klang`, nur Deutsch, keine eigene Komponente. Schwester-Apps: `musik-tonhoehe-harmonik`,
+`musik-rhythmus-takt`.
 
 ## Curriculum
 
-<!-- FILL IN: Land, Schulform, Jahrgang; orientation (Lehrplan: document, issuer, year, address, page and unit per
-part; welcome, not required); where the creator's material differs, and which one the app follows. -->
+- Hessen, Gymnasium, Jahrgang 8, Musik. Kein Lehrplan nötig: Strang der Lernlandkarte.
+- Kompetenzen der Karte in Richtstufe 5-6: Wiederholung.
+- Aufbau nach zwei Arbeitsblättern des Erstellers (Instrumentenliste mit Gruppen; Sitzplan eines Sinfonieorchesters
+  mittlerer Größe). Das Material bleibt lokal: nie committen, nicht zitieren; nur der Aufbau ist übernommen.
 
 ## Competencies
 
-<!-- FILL IN: every competency as "Ich kann …", grouped by chapter; per competency: page or round (file, id),
-exercise ids. -->
+Ein Kapitel `orchester`; Ids und Sätze wörtlich von `https://lernapps.net/apps/map/musik.json`.
+- `src/orchester/das-brauchst-du.yaml`: recap `musik/klangquellen-unterscheiden`, `musik/schwingung`.
+- `instrumentenfamilien` – Ich kann Instrumente nach der Art, wie sie klingen, in Familien einordnen.
+  → `src/orchester/saiten-und-blasinstrumente.yaml`, `src/orchester/weitere-instrumente.yaml`.
+- `ensembles-besetzungen` – Ich kann Besetzungen wie Sinfonieorchester, Band oder Chor erkennen und ihre Instrumente
+  oder Stimmen nennen. → `src/orchester/instrumente-im-orchester.yaml`, `src/orchester/sitzordnung.yaml`
+  (Musterseite; nur Sinfonieorchester).
 
 ## Content structure
 
-<!-- FILL IN: how a chapter, page or round is built: sections or question groups in order, ids or titles, what
-each holds; length. -->
+- Inhaltsseiten: `einstieg`, `regel`, `beispiel`, `uebung` (mindestens vier Übungen, leicht → schwer); Ziel am
+  Anfang, Ausblick am Ende; höchstens 350 Wörter Lesetext, höchstens vier Textblöcke am Stück.
+- Wiederholungsseite am Kapitelanfang, ohne Übung. Keine Geschichte. Anrede „du“.
+- Selbsteinschätzung in `src/orchester/chapter.yaml`, 2–3 Übungen je Inhaltsseite, bevorzugt `generated` und
+  Zuordnungen.
 
 ## Terminology
 
-<!-- FILL IN: terms used and avoided (why); units, notation; how learners are addressed; glossary terms with
-wording. -->
+- Gruppen: Saiteninstrumente (Streichinstrumente, Zupfinstrumente), Blasinstrumente (Holzblasinstrumente,
+  Blechblasinstrumente), Tasteninstrumente, Schlaginstrumente (aus Holz, aus Metall, mit Fell; tonerzeugend oder
+  geräuscherzeugend), Harmonikainstrumente, elektronische Instrumente.
+- Orchestergruppen: Streicher, Holzbläser, Blechbläser, Pauken und Schlagwerk.
+- Instrumente: Geige (Violine), Bratsche, Cello (Violoncello), Kontrabass, Querflöte, Oboe, Klarinette, Fagott,
+  Waldhorn (Horn), Trompete, Posaune, Tuba, Pauken. Im Sitzplan: 1. Violinen, 2. Violinen, Bratschen, Violoncelli,
+  Kontrabässe, Flöten, Oboen, Klarinetten, Fagotte, Hörner, Trompeten, Posaunen, Pauken, Dirigent.
+- Einteilung immer nach der Tonerzeugung, nicht nach dem Material.
 
 ## Exercise patterns
 
-<!-- FILL IN: per pattern: name, competency, archetype form (block or question type, fixed parts, what varies),
-one example (file, id), data file. -->
+- **Instrument einordnen**: `generated` aus `src/data/instrumente.yaml`, `compare: choice` mit den Gruppen- oder
+  Untergruppennamen; Fehler: die naheliegende falsche Gruppe (Feld `falsch`) mit Meldung (Feld `warum`).
+- **Zuordnen**: `matching` (Tonerzeugung ↔ Untergruppe, Instrument ↔ Orchestergruppe, Schlaginstrument ↔ Material).
+- **Auswählen, entscheiden**: `multiple-choice`, `single-choice` mit typischem Fehler als Option, `true-false`.
+- **Sitzplan beschriften**: `matching` mit `pairsFrom: material` aus einer `labelled-figure` (`sitzplan-leer.svg`,
+  `legend: false`, Buchstaben A–N); `ordering` von vorn nach hinten.
 
 ## Figures
 
-<!-- FILL IN: figure kinds and images, for what; conventions (colours, labels, units, orientation, sizes); alt
-texts and captions; image origin and licence. -->
+- `src/images/sitzplan.svg` (farbig nach Orchestergruppen, für die Regel mit Legende) und
+  `src/images/sitzplan-leer.svg` (einfarbig, für Aufgaben), selbst gezeichnet, CC BY 4.0: Bühne von oben, Dirigent
+  vorn, Streicher im inneren Halbkreis, Holzbläser hinten links, Blechbläser hinten rechts, Pauken ganz hinten. Die
+  Markierungen setzt die `labelled-figure` (x/y in Prozent, siehe die Seite `sitzordnung`).
+- `src/images/familien.svg`: Baum der Gruppen und Untergruppen aus Text-Kästen, selbst gezeichnet, CC BY 4.0.
+- Keine Bilder von Instrumenten. Farben nie allein: die Legende nennt die Gruppen.
 
 ## Sources
 
-<!-- FILL IN: sources linked or relied on (Lehrplan, second explanations, videos, articles), how verified, what
-is left out; the creator's material stays local, never committed. -->
+Geöffnet 2026-11-24, CC BY-SA 4.0, nur Fakten:
+- Lernlandkarte Musik, https://lernapps.net/apps/map/musik.json.
+- „Holzblasinstrument“, „Blechblasinstrument“, „Streichinstrument“, „Zupfinstrument“, „Schlaginstrument“,
+  „Harmonikainstrument“ auf https://de.wikipedia.org/wiki/… – Einteilung nach der Tonerzeugung.
+- „Orchester“ (https://de.wikipedia.org/wiki/Sinfonieorchester), „Amerikanische Aufstellung“
+  (https://de.wikipedia.org/wiki/Amerikanische_Aufstellung) – Gruppen, 2. Violinen neben den 1.
+- Plätze von Bläsern und Pauken: nach dem Material des Erstellers (in der Quelle nicht beschrieben).
 
 ## Adding a chapter or round
 
-<!-- FILL IN: the steps for a new chapter (explainer) or round (quiz), in order, with the files: competencies,
-content, exercises from the patterns, entry topics, check, commit. -->
+1. Kompetenzen des Strangs `musik/klang` von der Karte (z. B. `stimmlagen`, `dynamik-zeichen`), neues Kapitel in
+   `src/app.yaml`.
+2. Wiederholungsseite für Voraussetzungen.
+3. Seiten mit `einstieg`, `regel`, `beispiel`, `uebung`; neue Instrumente in `src/data/instrumente.yaml`.
+4. 1–3 Übungen je Seite in `selfAssessment`.
+5. `npx --no -- lernapps check`, Screenshots ansehen, committen.
 
 ## Rules learned from mistakes
 
-<!-- FILL IN: one line per rule with the mistake it came from. "None yet." until the first. -->
+Aus den Schwester-Apps übernommen:
+- Erklärfiguren benennen nur Anker; Aufgaben-Figuren verraten nichts (einfarbiger Sitzplan in Übungen).
+- Merke-Kästen vor die Figur, die sie erklären; Fehlermeldungen nennen nur, was schon erklärt ist.
+- Der Einstieg ist ohne Raten lösbar; Übungen haben einen Denkschritt, nicht nur Abschreiben.
+- Tabellen höchstens zwei lange Spalten (360 px).
