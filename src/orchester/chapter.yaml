@@ -1,4 +1,18 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Instrumente und Orchester
 summary: Instrumente nach der Tonerzeugung einordnen, die Instrumente des Sinfonieorchesters und seine Sitzordnung.
-pages: [das-brauchst-du, saiten-und-blasinstrumente, weitere-instrumente, sitzordnung]
+pages: [das-brauchst-du, saiten-und-blasinstrumente, weitere-instrumente, instrumente-im-orchester, sitzordnung]
+selfAssessment:
+  pages:
+    - exercises:
+        - /orchester/saiten-und-blasinstrumente/#untergruppe-bestimmen
+        - /orchester/saiten-und-blasinstrumente/#untergruppe-bestimmen
+        - /orchester/weitere-instrumente/#gruppe-bestimmen
+    - exercises:
+        - /orchester/weitere-instrumente/#ton-oder-geraeusch
+        - /orchester/instrumente-im-orchester/#im-orchester
+        - /orchester/instrumente-im-orchester/#orchestergruppe-zuordnen
+    - exercises:
+        - /orchester/sitzordnung/#streicher-beschriften
+        - /orchester/sitzordnung/#blaeser-beschriften
+        - /orchester/sitzordnung/#bratschen-celli

@@ -1,0 +1,135 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Instrumente im Sinfonieorchester
+description: "Welche Instrumente im Sinfonieorchester spielen: Streicher, Holzbläser, Blechbläser, Pauken und Schlagwerk."
+competencies: [ensembles-besetzungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Gitarre im Orchester?
+    blocks:
+      - type: text
+        text: >-
+          Auf dieser Seite lernst du, welche Instrumente im Sinfonieorchester spielen und zu welcher Orchestergruppe sie
+          gehören. Du kennst die sechs Instrumentengruppen. Überleg zuerst:
+      - type: single-choice
+        id: einstieg-gitarre
+        text: Ein Sinfonieorchester spielt ohne Verstärker in großen Konzertsälen. Welches Instrument gehört eher nicht dazu?
+        options:
+          - text: E-Gitarre
+            correct: true
+            info: Die E-Gitarre braucht Strom und Verstärker. Sie spielt in Bands, nicht im klassischen Sinfonieorchester.
+          - text: Geige
+            correct: false
+            info: Geigen sind die größte Gruppe im Orchester. Sie sitzen ganz vorn.
+          - text: Trompete
+            correct: false
+            info: Trompeten gehören zu den Blechbläsern des Orchesters.
+        explanation: Das Sinfonieorchester besteht vor allem aus Streichern, Holzbläsern, Blechbläsern und Pauken.
+        links:
+          - title: Orchester (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Sinfonieorchester"
+  - type: section
+    id: regel
+    title: Vier Gruppen
+    blocks:
+      - type: text
+        text: >-
+          Ein Sinfonieorchester hat vier Gruppen. Die **Streicher**: Geigen (1. und 2. Violinen), Bratschen, Celli und
+          Kontrabässe. Die **Holzbläser**: Querflöten, Oboen, Klarinetten und Fagotte. Die **Blechbläser**: Waldhörner,
+          Trompeten, Posaunen und Tuba. Dazu **Pauken und Schlagwerk**, zum Beispiel Becken und Triangel. Manchmal
+          kommen Harfe, Klavier oder weitere Schlaginstrumente dazu.
+      - type: table
+        caption: Die vier Gruppen des Sinfonieorchesters
+        header: [Gruppe, Instrumente]
+        rows:
+          - [Streicher, "Geige, Bratsche, Cello, Kontrabass"]
+          - [Holzbläser, "Querflöte, Oboe, Klarinette, Fagott"]
+          - [Blechbläser, "Waldhorn, Trompete, Posaune, Tuba"]
+          - [Pauken und Schlagwerk, "Pauken, Becken, Triangel"]
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: >-
+              Saxophon und Blockflöte sind Holzblasinstrumente, gehören aber nicht zum festen Sinfonieorchester. Die
+              Orchestergruppe sagt, wer zusammen spielt; die Instrumentengruppe sagt, wie der Ton entsteht.
+  - type: section
+    id: beispiel
+    title: "Beispiel: die Tuba"
+    blocks:
+      - type: example
+        title: Gehört die Tuba ins Orchester, und zu welcher Gruppe?
+        blocks:
+          - type: text
+            text: |
+              1. Bei der Tuba schwingen die Lippen im Mundstück: ein Blechblasinstrument.
+              2. Das Sinfonieorchester hat Blechbläser, und die Tuba ist das tiefste von ihnen.
+              3. Ja, sie gehört ins Orchester, zur Gruppe der **Blechbläser**.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: number
+        id: anzahl-gruppen
+        text: Aus wie vielen Gruppen besteht ein Sinfonieorchester?
+        answer: 4
+        tolerance: 0
+        mistakes:
+          - answer: 6
+            message: Sechs sind die Instrumentengruppen. Das Orchester hat davon nur vier Gruppen.
+          - answer: 3
+            message: "Denk an die Pauken: Streicher, Holzbläser, Blechbläser und Pauken mit Schlagwerk."
+        explanation: Streicher, Holzbläser, Blechbläser, Pauken und Schlagwerk.
+        links:
+          - title: Orchester (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Sinfonieorchester"
+      - type: generated
+        id: im-orchester
+        given:
+          i: { pick: 1, from: { data: instrumente } }
+        where:
+          - "i.orchester != 'manchmal'"
+        task:
+          text: "Gehört das Instrument {{i.name}} zum festen Sinfonieorchester?"
+        answer:
+          value: "i.orchester"
+          compare: { choice: [ja, nein] }
+        hint: "Das Orchester hat Streicher, Holzbläser, Blechbläser, Pauken und Schlagwerk. Gehört das Instrument zu einer dieser Gruppen?"
+        steps:
+          - "{{i.name}}: {{answer}}."
+      - type: matching
+        id: orchestergruppe-zuordnen
+        text: Zu welcher Orchestergruppe gehört das Instrument?
+        pairs:
+          - { left: Bratsche, right: Streicher }
+          - { left: Fagott, right: Holzbläser }
+          - { left: Waldhorn, right: Blechbläser }
+          - { left: Pauken, right: Pauken und Schlagwerk }
+        distractors: [Zupfinstrumente]
+        explanation: Das Waldhorn ist ein Blechblasinstrument, auch wenn es neben den Holzbläsern sitzt.
+        links:
+          - title: Orchester (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Sinfonieorchester"
+      - type: multiple-choice
+        id: blechblaeser-orchester
+        text: Welche Instrumente gehören zu den Blechbläsern des Orchesters? Wähle alle passenden.
+        options:
+          - text: Tuba
+            correct: true
+            info: Die Tuba ist das tiefste Blechblasinstrument des Orchesters.
+          - text: Waldhorn
+            correct: true
+            info: Beim Waldhorn schwingen die Lippen, also ein Blechblasinstrument.
+          - text: Saxophon
+            correct: false
+            info: Das Saxophon ist ein Holzblasinstrument und gehört nicht zum festen Orchester.
+          - text: Fagott
+            correct: false
+            info: Das Fagott ist ein Holzblasinstrument.
+        explanation: "Blechbläser im Orchester: Waldhorn, Trompete, Posaune, Tuba."
+        links:
+          - title: Blechblasinstrument (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Blechblasinstrument"
+      - type: text
+        text: >-
+          Jetzt weißt du, welche Instrumente im Orchester spielen. Als Nächstes lernst du, wo jede Gruppe sitzt.
