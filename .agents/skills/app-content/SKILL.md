@@ -90,3 +90,6 @@ Aus den Schwester-Apps übernommen:
 - Merke-Kästen vor die Figur, die sie erklären; Fehlermeldungen nennen nur, was schon erklärt ist.
 - Der Einstieg ist ohne Raten lösbar; Übungen haben einen Denkschritt, nicht nur Abschreiben.
 - Tabellen höchstens zwei lange Spalten (360 px).
+- Die Sitzordnung folgt dem Material des Erstellers (Flöten außen links, Posaunen außen rechts), auch wenn echte
+  Orchester die Holzbläser oft in zwei Reihen in der Mitte setzen; links/rechts aus Sicht von Publikum und Dirigent.
+- Marker der Regel-Figur sind Ziffern (1–4), damit sie nicht mit den Buchstaben der Übung kollidieren.

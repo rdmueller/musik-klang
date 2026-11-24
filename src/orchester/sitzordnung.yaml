@@ -24,29 +24,32 @@ blocks:
           - text: Mitten zwischen den Geigen
             correct: false
             info: Die Gruppen sitzen zusammen, damit sie gut aufeinander hören können. Gemischt wird nicht.
-        explanation: Als Merkhilfe gilt, leise Instrumente vorn, laute hinten. Jede Gruppe sitzt zusammen.
+        explanation: "Merk dir: leise vorn, laut hinten. Jede Gruppe sitzt zusammen."
         links:
           - title: Orchester (Wikipedia)
             url: "https://de.wikipedia.org/wiki/Sinfonieorchester"
   - type: section
     id: regel
-    title: Vorn die Streicher, hinten die Bläser
+    title: Wer sitzt wo?
     blocks:
       - type: text
         text: >-
-          Der Dirigent steht vorn in der Mitte. Um ihn herum sitzen im Halbkreis die **Streicher**, von links nach
-          rechts: 1. Violinen, 2. Violinen, Bratschen, Violoncelli und ganz rechts die Kontrabässe. Dahinter sitzen
-          links die **Holzbläser** (von links: Flöten, Oboen, Klarinetten, Fagotte) und rechts die **Blechbläser** (von
-          der Mitte nach rechts: Hörner, Trompeten, Posaunen). Ganz hinten in der Mitte stehen die **Pauken**.
+          So sitzt ein Sinfonieorchester mittlerer Größe. Links und rechts gelten so, wie Publikum und Dirigent auf das
+          Orchester schauen; im Bild sitzt das Publikum unten. Der Dirigent steht vorn in der Mitte. Um ihn herum
+          sitzen im Halbkreis die **Streicher**, von links nach rechts: 1. Violinen, 2. Violinen, Bratschen,
+          Violoncelli und ganz rechts die Kontrabässe. Die Geigen sind zwei Gruppen, weil sie verschiedene Stimmen
+          spielen. Im Ring dahinter sitzen links die **Holzbläser** (von außen zur Mitte: Flöten, Oboen, Klarinetten,
+          Fagotte) und rechts die **Blechbläser** (von der Mitte nach außen: Hörner, Trompeten, Posaunen). Ganz hinten
+          in der Mitte stehen die **Pauken**.
       - type: labelled-figure
         image: images/sitzplan.svg
         alt: "Sitzplan eines Sinfonieorchesters von oben: vorn der Dirigent, im inneren Halbkreis blau die Streicher, dahinter links grün die Holzbläser, rechts gelb die Blechbläser, ganz hinten rot die Pauken."
         caption: Die vier Gruppen im Sitzplan. Wer in einer Gruppe wo sitzt, steht im Text darüber.
         labels:
-          - { x: 50, y: 70, marker: S, text: Streicher }
-          - { x: 25, y: 55, marker: H, text: Holzbläser }
-          - { x: 72, y: 55, marker: B, text: Blechbläser }
-          - { x: 50, y: 17.7, marker: P, text: Pauken }
+          - { x: 50, y: 70, marker: "1", text: Streicher }
+          - { x: 25, y: 55, marker: "2", text: Holzbläser }
+          - { x: 72, y: 55, marker: "3", text: Blechbläser }
+          - { x: 50, y: 17.7, marker: "4", text: Pauken }
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: note
@@ -54,9 +57,9 @@ blocks:
         blocks:
           - type: text
             text: >-
-              Die Bratschen sitzen in der Mitte, die Violoncelli rechts davon. Die Hörner gehören zu den Blechbläsern und
-              sitzen hinten in der Mitte, neben den Holzbläsern. Diese Aufstellung heißt amerikanische Aufstellung. Bei
-              der älteren deutschen Aufstellung sitzen die 2. Violinen rechts, gegenüber den 1. Violinen.
+              Die Hörner gehören zu den Blechbläsern, auch wenn sie neben den Holzbläsern sitzen. Diese Aufstellung mit
+              beiden Geigengruppen links heißt amerikanische Aufstellung; sie ist heute weltweit üblich. Bei der älteren
+              deutschen Aufstellung sitzen die 2. Violinen rechts, gegenüber den 1. Violinen.
   - type: section
     id: beispiel
     title: "Beispiel: der Platz der Fagotte"
@@ -66,9 +69,9 @@ blocks:
         blocks:
           - type: text
             text: |
-              1. Das Fagott ist ein Holzblasinstrument, also sitzt es in der hinteren Reihe links.
-              2. Die Holzbläser sitzen von links nach rechts: Flöten, Oboen, Klarinetten, Fagotte.
-              3. Die Fagotte sitzen also ganz rechts bei den Holzbläsern, **hinten in der Mitte**, direkt neben den Hörnern.
+              1. Das Fagott ist ein Holzblasinstrument, also sitzt es im Ring hinter den Streichern, auf der linken Hälfte.
+              2. Die Holzbläser sitzen von außen zur Mitte: Flöten, Oboen, Klarinetten, Fagotte.
+              3. Die Fagotte sind die letzten zur Mitte hin: Sie sitzen **hinten, direkt links von der Mitte**, neben den Hörnern.
   - type: section
     id: uebung
     title: Übung
@@ -97,7 +100,7 @@ blocks:
             url: "https://de.wikipedia.org/wiki/Amerikanische_Aufstellung"
       - type: matching
         id: blaeser-beschriften
-        text: Wer sitzt an den Plätzen F bis N?
+        text: Wer sitzt an den Plätzen F bis N? (J fehlt, wie oft auf Arbeitsblättern.)
         material:
           - type: labelled-figure
             image: images/sitzplan-leer.svg
@@ -120,11 +123,23 @@ blocks:
         links:
           - title: Orchester (Wikipedia)
             url: "https://de.wikipedia.org/wiki/Sinfonieorchester"
-      - type: ordering
-        id: vorn-nach-hinten
-        text: Ordne die Gruppen vom Dirigenten aus nach hinten.
-        items: [Streicher, Holzbläser und Blechbläser, Pauken]
-        explanation: Vorn die leisen Streicher, dahinter die Bläser, ganz hinten die Pauken.
+      - type: multiple-choice
+        id: neben-den-hoernern
+        text: Wer sitzt direkt neben den Hörnern? Wähle alle passenden.
+        options:
+          - text: die Fagotte
+            correct: true
+            info: Links neben den Hörnern, zur Mitte hin, sitzen die Fagotte als letzte Holzbläser.
+          - text: die Trompeten
+            correct: true
+            info: Rechts neben den Hörnern sitzen die Trompeten.
+          - text: die Flöten
+            correct: false
+            info: Die Flöten sitzen ganz außen links, weit weg von den Hörnern.
+          - text: die Kontrabässe
+            correct: false
+            info: Die Kontrabässe sitzen vorn im Halbkreis der Streicher, ganz rechts.
+        explanation: Die Hörner sitzen genau zwischen Holzbläsern und Blechbläsern, hinten in der Mitte.
         links:
           - title: Orchester (Wikipedia)
             url: "https://de.wikipedia.org/wiki/Sinfonieorchester"
@@ -140,7 +155,7 @@ blocks:
             info: Die 2. Violinen sitzen links neben den Bratschen, neben den 1. Violinen.
           - text: die Kontrabässe
             correct: false
-            info: Die Kontrabässe sitzen ganz rechts außen, hinter den Violoncelli.
+            info: Die Kontrabässe sitzen ganz rechts außen, rechts neben den Violoncelli.
           - text: die Hörner
             correct: false
             info: Die Hörner sitzen in der hinteren Reihe, nicht im Halbkreis der Streicher.
@@ -150,5 +165,5 @@ blocks:
             url: "https://de.wikipedia.org/wiki/Amerikanische_Aufstellung"
       - type: text
         text: >-
-          Geschafft: Du kennst die Instrumentengruppen und weißt, wo im Orchester wer sitzt. Prüf jetzt mit der
-          Selbsteinschätzung auf der Startseite, deinem Probetest, was schon sitzt.
+          Geschafft: Du weißt, wo im Orchester wer sitzt. Prüf jetzt mit der Selbsteinschätzung auf der Startseite,
+          deinem Probetest, was schon sitzt.
