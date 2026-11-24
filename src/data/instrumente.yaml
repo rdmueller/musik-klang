@@ -1,345 +1,345 @@
 # Die Instrumente der App: Gruppe und Untergruppe nach der Tonerzeugung, die naheliegende falsche Untergruppe mit
 # Begründung, ob sie ins Sinfonieorchester gehören (ja, nein, manchmal) und bei Schlaginstrumenten tonerzeugend oder
-# geräuscherzeugend.
-- {
-    name: Geige,
-    gruppe: Saiteninstrument,
-    untergruppe: Streichinstrument,
-    falsch: Zupfinstrument,
-    warum: "Die Saiten der Geige werden mit dem Bogen gestrichen.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Bratsche,
-    gruppe: Saiteninstrument,
-    untergruppe: Streichinstrument,
-    falsch: Zupfinstrument,
-    warum: "Die Bratsche wird wie die Geige mit dem Bogen gestrichen.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Cello,
-    gruppe: Saiteninstrument,
-    untergruppe: Streichinstrument,
-    falsch: Zupfinstrument,
-    warum: "Das Cello wird mit dem Bogen gestrichen.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Kontrabass,
-    gruppe: Saiteninstrument,
-    untergruppe: Streichinstrument,
-    falsch: Zupfinstrument,
-    warum: "Im Orchester wird der Kontrabass meist mit dem Bogen gestrichen.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Gitarre,
-    gruppe: Saiteninstrument,
-    untergruppe: Zupfinstrument,
-    falsch: Streichinstrument,
-    warum: "Die Saiten der Gitarre werden mit den Fingern gezupft, nicht gestrichen.",
-    orchester: nein,
-    ton: "-",
-  }
-- {
-    name: Harfe,
-    gruppe: Saiteninstrument,
-    untergruppe: Zupfinstrument,
-    falsch: Streichinstrument,
-    warum: "Die Harfe hat viele Saiten, aber keinen Bogen. Sie wird gezupft.",
-    orchester: manchmal,
-    ton: "-",
-  }
-- {
-    name: Zither,
-    gruppe: Saiteninstrument,
-    untergruppe: Zupfinstrument,
-    falsch: Streichinstrument,
-    warum: "Die Zither wird gezupft.",
-    orchester: nein,
-    ton: "-",
-  }
-- {
-    name: Klarinette,
-    gruppe: Blasinstrument,
-    untergruppe: Holzblasinstrument,
-    falsch: Blechblasinstrument,
-    warum: "Bei der Klarinette schwingt ein Rohrblatt am Mundstück.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Oboe,
-    gruppe: Blasinstrument,
-    untergruppe: Holzblasinstrument,
-    falsch: Blechblasinstrument,
-    warum: "Bei der Oboe schwingt ein doppeltes Rohrblatt.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Fagott,
-    gruppe: Blasinstrument,
-    untergruppe: Holzblasinstrument,
-    falsch: Blechblasinstrument,
-    warum: "Beim Fagott schwingt ein doppeltes Rohrblatt.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Querflöte,
-    gruppe: Blasinstrument,
-    untergruppe: Holzblasinstrument,
-    falsch: Blechblasinstrument,
-    warum: "Die Querflöte ist meist aus Metall, aber der Ton entsteht durch Luft an einer Kante. Sie zählt zu den Holzblasinstrumenten.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Blockflöte,
-    gruppe: Blasinstrument,
-    untergruppe: Holzblasinstrument,
-    falsch: Blechblasinstrument,
-    warum: "Bei der Blockflöte trifft die Luft auf eine Kante.",
-    orchester: nein,
-    ton: "-",
-  }
-- {
-    name: Saxophon,
-    gruppe: Blasinstrument,
-    untergruppe: Holzblasinstrument,
-    falsch: Blechblasinstrument,
-    warum: "Das Saxophon ist aus Metall, aber ein Rohrblatt erzeugt den Ton. Es zählt zu den Holzblasinstrumenten.",
-    orchester: nein,
-    ton: "-",
-  }
-- {
-    name: Trompete,
-    gruppe: Blasinstrument,
-    untergruppe: Blechblasinstrument,
-    falsch: Holzblasinstrument,
-    warum: "Bei der Trompete schwingen die Lippen im Mundstück.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Waldhorn,
-    gruppe: Blasinstrument,
-    untergruppe: Blechblasinstrument,
-    falsch: Holzblasinstrument,
-    warum: "Beim Waldhorn schwingen die Lippen im Mundstück, auch wenn es neben den Holzbläsern sitzt.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Posaune,
-    gruppe: Blasinstrument,
-    untergruppe: Blechblasinstrument,
-    falsch: Holzblasinstrument,
-    warum: "Bei der Posaune schwingen die Lippen im Mundstück.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Tuba,
-    gruppe: Blasinstrument,
-    untergruppe: Blechblasinstrument,
-    falsch: Holzblasinstrument,
-    warum: "Bei der Tuba schwingen die Lippen im Mundstück.",
-    orchester: ja,
-    ton: "-",
-  }
-- {
-    name: Klavier,
-    gruppe: Tasteninstrument,
-    untergruppe: Tasteninstrument,
-    falsch: Saiteninstrument,
-    warum: "Im Klavier sind zwar Saiten, man spielt es aber über Tasten. In dieser Einteilung ist es ein Tasteninstrument.",
-    orchester: manchmal,
-    ton: "-",
-  }
-- {
-    name: Orgel,
-    gruppe: Tasteninstrument,
-    untergruppe: Tasteninstrument,
-    falsch: Blasinstrument,
-    warum: "Die Orgel hat Pfeifen, man spielt sie aber über Tasten. Sie ist ein Tasteninstrument.",
-    orchester: manchmal,
-    ton: "-",
-  }
-- {
-    name: Cembalo,
-    gruppe: Tasteninstrument,
-    untergruppe: Tasteninstrument,
-    falsch: Saiteninstrument,
-    warum: "Beim Cembalo zupft eine Mechanik die Saiten, gespielt wird über Tasten. Es ist ein Tasteninstrument.",
-    orchester: manchmal,
-    ton: "-",
-  }
-- {
-    name: Claves,
-    gruppe: Schlaginstrument,
-    untergruppe: aus Holz,
-    falsch: aus Metall,
-    warum: "Claves sind zwei Holzstäbe, die man gegeneinanderschlägt.",
-    orchester: nein,
-    ton: geräuscherzeugend,
-  }
-- {
-    name: Maracas,
-    gruppe: Schlaginstrument,
-    untergruppe: aus Holz,
-    falsch: mit Fell,
-    warum: "Maracas sind Rasseln, hier zu den Holzinstrumenten gezählt.",
-    orchester: nein,
-    ton: geräuscherzeugend,
-  }
-- {
-    name: Xylophon,
-    gruppe: Schlaginstrument,
-    untergruppe: aus Holz,
-    falsch: aus Metall,
-    warum: "Das Xylophon hat Platten aus Holz.",
-    orchester: manchmal,
-    ton: tonerzeugend,
-  }
-- {
-    name: Triangel,
-    gruppe: Schlaginstrument,
-    untergruppe: aus Metall,
-    falsch: aus Holz,
-    warum: "Der Triangel ist ein gebogener Metallstab.",
-    orchester: ja,
-    ton: geräuscherzeugend,
-  }
-- {
-    name: Becken,
-    gruppe: Schlaginstrument,
-    untergruppe: aus Metall,
-    falsch: mit Fell,
-    warum: "Becken sind Metallscheiben.",
-    orchester: ja,
-    ton: geräuscherzeugend,
-  }
-- {
-    name: Kuhglocke,
-    gruppe: Schlaginstrument,
-    untergruppe: aus Metall,
-    falsch: aus Holz,
-    warum: "Die Kuhglocke ist aus Metall.",
-    orchester: nein,
-    ton: geräuscherzeugend,
-  }
-- {
-    name: Vibraphon,
-    gruppe: Schlaginstrument,
-    untergruppe: aus Metall,
-    falsch: aus Holz,
-    warum: "Das Vibraphon hat Platten aus Metall, das Xylophon aus Holz.",
-    orchester: manchmal,
-    ton: tonerzeugend,
-  }
-- {
-    name: Trommel,
-    gruppe: Schlaginstrument,
-    untergruppe: mit Fell,
-    falsch: aus Holz,
-    warum: "Bei der Trommel schwingt ein gespanntes Fell.",
-    orchester: manchmal,
-    ton: geräuscherzeugend,
-  }
-- {
-    name: Congas,
-    gruppe: Schlaginstrument,
-    untergruppe: mit Fell,
-    falsch: aus Holz,
-    warum: "Congas haben ein gespanntes Fell.",
-    orchester: nein,
-    ton: geräuscherzeugend,
-  }
-- {
-    name: Bongos,
-    gruppe: Schlaginstrument,
-    untergruppe: mit Fell,
-    falsch: aus Holz,
-    warum: "Bongos haben ein gespanntes Fell.",
-    orchester: nein,
-    ton: geräuscherzeugend,
-  }
-- {
-    name: Pauken,
-    gruppe: Schlaginstrument,
-    untergruppe: mit Fell,
-    falsch: aus Metall,
-    warum: "Pauken haben einen Kessel aus Metall, aber der Ton kommt vom gespannten Fell.",
-    orchester: ja,
-    ton: tonerzeugend,
-  }
-- {
-    name: Akkordeon,
-    gruppe: Harmonikainstrument,
-    untergruppe: Harmonikainstrument,
-    falsch: Tasteninstrument,
-    warum: "Das Akkordeon hat Tasten, aber den Ton machen durchschlagende Zungen. Es ist ein Harmonikainstrument.",
-    orchester: nein,
-    ton: "-",
-  }
-- {
-    name: Mundharmonika,
-    gruppe: Harmonikainstrument,
-    untergruppe: Harmonikainstrument,
-    falsch: Blasinstrument,
-    warum: "Man bläst hinein, aber den Ton machen durchschlagende Zungen. Sie ist ein Harmonikainstrument.",
-    orchester: nein,
-    ton: "-",
-  }
-- {
-    name: Harmonium,
-    gruppe: Harmonikainstrument,
-    untergruppe: Harmonikainstrument,
-    falsch: Tasteninstrument,
-    warum: "Das Harmonium sieht aus wie ein Klavier, aber den Ton machen durchschlagende Zungen.",
-    orchester: nein,
-    ton: "-",
-  }
-- {
-    name: Melodica,
-    gruppe: Harmonikainstrument,
-    untergruppe: Harmonikainstrument,
-    falsch: Blasinstrument,
-    warum: "Bei der Melodica machen durchschlagende Zungen den Ton.",
-    orchester: nein,
-    ton: "-",
-  }
-- {
-    name: Keyboard,
-    gruppe: elektronisches Instrument,
-    untergruppe: elektronisches Instrument,
-    falsch: Tasteninstrument,
-    warum: "Das Keyboard hat Tasten, aber den Klang erzeugt Elektronik. Es ist ein elektronisches Instrument.",
-    orchester: nein,
-    ton: "-",
-  }
-- {
-    name: E-Gitarre,
-    gruppe: elektronisches Instrument,
-    untergruppe: elektronisches Instrument,
-    falsch: Saiteninstrument,
-    warum: "Die E-Gitarre hat Saiten, aber ihr Klang braucht Strom und Verstärker. Hier zählt sie zu den elektronischen Instrumenten.",
-    orchester: nein,
-    ton: "-",
-  }
-- {
-    name: E-Bass,
-    gruppe: elektronisches Instrument,
-    untergruppe: elektronisches Instrument,
-    falsch: Saiteninstrument,
-    warum: "Der E-Bass klingt erst mit Strom und Verstärker. Hier zählt er zu den elektronischen Instrumenten.",
-    orchester: nein,
-    ton: "-",
-  }
+# geräuscherzeugend; gegenteil und tonGegenteil sind die jeweils andere Antwort (für Fehlermeldungen).
+- name: Geige
+  gruppe: Saiteninstrument
+  untergruppe: Streichinstrument
+  falsch: Zupfinstrument
+  warum: Die Saiten der Geige werden mit dem Bogen gestrichen.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Bratsche
+  gruppe: Saiteninstrument
+  untergruppe: Streichinstrument
+  falsch: Zupfinstrument
+  warum: Die Bratsche wird wie die Geige mit dem Bogen gestrichen.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Cello
+  gruppe: Saiteninstrument
+  untergruppe: Streichinstrument
+  falsch: Zupfinstrument
+  warum: Das Cello wird mit dem Bogen gestrichen.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Kontrabass
+  gruppe: Saiteninstrument
+  untergruppe: Streichinstrument
+  falsch: Zupfinstrument
+  warum: Der Kontrabass wird im Orchester mit dem Bogen gestrichen und zählt zu den Streichinstrumenten.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Gitarre
+  gruppe: Saiteninstrument
+  untergruppe: Zupfinstrument
+  falsch: Streichinstrument
+  warum: Die Saiten der Gitarre werden mit den Fingern gezupft, nicht gestrichen.
+  orchester: nein
+  ton: "-"
+  gegenteil: ja
+  tonGegenteil: "-"
+- name: Harfe
+  gruppe: Saiteninstrument
+  untergruppe: Zupfinstrument
+  falsch: Streichinstrument
+  warum: Die Harfe hat viele Saiten, aber keinen Bogen. Sie wird gezupft.
+  orchester: manchmal
+  ton: "-"
+  gegenteil: "-"
+  tonGegenteil: "-"
+- name: Zither
+  gruppe: Saiteninstrument
+  untergruppe: Zupfinstrument
+  falsch: Streichinstrument
+  warum: Die Zither wird gezupft.
+  orchester: nein
+  ton: "-"
+  gegenteil: ja
+  tonGegenteil: "-"
+- name: Klarinette
+  gruppe: Blasinstrument
+  untergruppe: Holzblasinstrument
+  falsch: Blechblasinstrument
+  warum: Bei der Klarinette schwingt ein Rohrblatt am Mundstück.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Oboe
+  gruppe: Blasinstrument
+  untergruppe: Holzblasinstrument
+  falsch: Blechblasinstrument
+  warum: Bei der Oboe schwingt ein doppeltes Rohrblatt.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Fagott
+  gruppe: Blasinstrument
+  untergruppe: Holzblasinstrument
+  falsch: Blechblasinstrument
+  warum: Beim Fagott schwingt ein doppeltes Rohrblatt.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Querflöte
+  gruppe: Blasinstrument
+  untergruppe: Holzblasinstrument
+  falsch: Blechblasinstrument
+  warum: Die Querflöte ist meist aus Metall, aber der Ton entsteht durch Luft an einer Kante. Sie zählt zu den Holzblasinstrumenten.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Blockflöte
+  gruppe: Blasinstrument
+  untergruppe: Holzblasinstrument
+  falsch: Blechblasinstrument
+  warum: Bei der Blockflöte trifft die Luft auf eine Kante.
+  orchester: nein
+  ton: "-"
+  gegenteil: ja
+  tonGegenteil: "-"
+- name: Saxophon
+  gruppe: Blasinstrument
+  untergruppe: Holzblasinstrument
+  falsch: Blechblasinstrument
+  warum: Das Saxophon ist aus Metall, aber ein Rohrblatt erzeugt den Ton. Es zählt zu den Holzblasinstrumenten.
+  orchester: nein
+  ton: "-"
+  gegenteil: ja
+  tonGegenteil: "-"
+- name: Trompete
+  gruppe: Blasinstrument
+  untergruppe: Blechblasinstrument
+  falsch: Holzblasinstrument
+  warum: Bei der Trompete schwingen die Lippen im Mundstück.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Waldhorn
+  gruppe: Blasinstrument
+  untergruppe: Blechblasinstrument
+  falsch: Holzblasinstrument
+  warum: Beim Waldhorn schwingen die Lippen im Mundstück.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Posaune
+  gruppe: Blasinstrument
+  untergruppe: Blechblasinstrument
+  falsch: Holzblasinstrument
+  warum: Bei der Posaune schwingen die Lippen im Mundstück.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Tuba
+  gruppe: Blasinstrument
+  untergruppe: Blechblasinstrument
+  falsch: Holzblasinstrument
+  warum: Bei der Tuba schwingen die Lippen im Mundstück.
+  orchester: ja
+  ton: "-"
+  gegenteil: nein
+  tonGegenteil: "-"
+- name: Klavier
+  gruppe: Tasteninstrument
+  untergruppe: Tasteninstrument
+  falsch: Saiteninstrument
+  warum: Im Klavier sind zwar Saiten, man spielt es aber über Tasten. In dieser Einteilung ist es ein Tasteninstrument.
+  orchester: manchmal
+  ton: "-"
+  gegenteil: "-"
+  tonGegenteil: "-"
+- name: Orgel
+  gruppe: Tasteninstrument
+  untergruppe: Tasteninstrument
+  falsch: Blasinstrument
+  warum: Die Orgel hat Pfeifen, man spielt sie aber über Tasten. Sie ist ein Tasteninstrument.
+  orchester: manchmal
+  ton: "-"
+  gegenteil: "-"
+  tonGegenteil: "-"
+- name: Cembalo
+  gruppe: Tasteninstrument
+  untergruppe: Tasteninstrument
+  falsch: Saiteninstrument
+  warum: Beim Cembalo zupft eine Mechanik die Saiten, gespielt wird über Tasten. Es ist ein Tasteninstrument.
+  orchester: manchmal
+  ton: "-"
+  gegenteil: "-"
+  tonGegenteil: "-"
+- name: Claves
+  gruppe: Schlaginstrument
+  untergruppe: aus Holz
+  falsch: aus Metall
+  warum: Claves sind zwei Holzstäbe, die man gegeneinanderschlägt.
+  orchester: nein
+  ton: geräuscherzeugend
+  gegenteil: ja
+  tonGegenteil: tonerzeugend
+- name: Maracas
+  gruppe: Schlaginstrument
+  untergruppe: aus Holz
+  falsch: mit Fell
+  warum: Maracas sind Rasseln; hier zählen sie zu den Schlaginstrumenten aus Holz.
+  orchester: nein
+  ton: geräuscherzeugend
+  gegenteil: ja
+  tonGegenteil: tonerzeugend
+- name: Xylophon
+  gruppe: Schlaginstrument
+  untergruppe: aus Holz
+  falsch: aus Metall
+  warum: Das Xylophon hat Platten aus Holz.
+  orchester: manchmal
+  ton: tonerzeugend
+  gegenteil: "-"
+  tonGegenteil: geräuscherzeugend
+- name: Triangel
+  gruppe: Schlaginstrument
+  untergruppe: aus Metall
+  falsch: aus Holz
+  warum: Der Triangel ist ein gebogener Metallstab.
+  orchester: ja
+  ton: geräuscherzeugend
+  gegenteil: nein
+  tonGegenteil: tonerzeugend
+- name: Becken
+  gruppe: Schlaginstrument
+  untergruppe: aus Metall
+  falsch: mit Fell
+  warum: Becken sind Metallscheiben.
+  orchester: ja
+  ton: geräuscherzeugend
+  gegenteil: nein
+  tonGegenteil: tonerzeugend
+- name: Kuhglocke
+  gruppe: Schlaginstrument
+  untergruppe: aus Metall
+  falsch: aus Holz
+  warum: Die Kuhglocke ist aus Metall.
+  orchester: nein
+  ton: geräuscherzeugend
+  gegenteil: ja
+  tonGegenteil: tonerzeugend
+- name: Vibraphon
+  gruppe: Schlaginstrument
+  untergruppe: aus Metall
+  falsch: aus Holz
+  warum: Das Vibraphon hat Platten aus Metall, das Xylophon aus Holz.
+  orchester: manchmal
+  ton: tonerzeugend
+  gegenteil: "-"
+  tonGegenteil: geräuscherzeugend
+- name: Trommel
+  gruppe: Schlaginstrument
+  untergruppe: mit Fell
+  falsch: aus Holz
+  warum: Bei der Trommel schwingt ein gespanntes Fell.
+  orchester: manchmal
+  ton: geräuscherzeugend
+  gegenteil: "-"
+  tonGegenteil: tonerzeugend
+- name: Congas
+  gruppe: Schlaginstrument
+  untergruppe: mit Fell
+  falsch: aus Holz
+  warum: Congas haben ein gespanntes Fell.
+  orchester: nein
+  ton: geräuscherzeugend
+  gegenteil: ja
+  tonGegenteil: tonerzeugend
+- name: Bongos
+  gruppe: Schlaginstrument
+  untergruppe: mit Fell
+  falsch: aus Holz
+  warum: Bongos haben ein gespanntes Fell.
+  orchester: nein
+  ton: geräuscherzeugend
+  gegenteil: ja
+  tonGegenteil: tonerzeugend
+- name: Pauken
+  gruppe: Schlaginstrument
+  untergruppe: mit Fell
+  falsch: aus Metall
+  warum: Pauken haben einen Kessel aus Metall, aber der Ton kommt vom gespannten Fell.
+  orchester: ja
+  ton: tonerzeugend
+  gegenteil: nein
+  tonGegenteil: geräuscherzeugend
+- name: Akkordeon
+  gruppe: Harmonikainstrument
+  untergruppe: Harmonikainstrument
+  falsch: Tasteninstrument
+  warum: Das Akkordeon hat Tasten, aber den Ton machen durchschlagende Zungen. Es ist ein Harmonikainstrument.
+  orchester: nein
+  ton: "-"
+  gegenteil: ja
+  tonGegenteil: "-"
+- name: Mundharmonika
+  gruppe: Harmonikainstrument
+  untergruppe: Harmonikainstrument
+  falsch: Blasinstrument
+  warum: Man bläst hinein, aber den Ton machen durchschlagende Zungen. Sie ist ein Harmonikainstrument.
+  orchester: nein
+  ton: "-"
+  gegenteil: ja
+  tonGegenteil: "-"
+- name: Harmonium
+  gruppe: Harmonikainstrument
+  untergruppe: Harmonikainstrument
+  falsch: Tasteninstrument
+  warum: Das Harmonium sieht aus wie ein Klavier, aber den Ton machen durchschlagende Zungen.
+  orchester: nein
+  ton: "-"
+  gegenteil: ja
+  tonGegenteil: "-"
+- name: Melodica
+  gruppe: Harmonikainstrument
+  untergruppe: Harmonikainstrument
+  falsch: Blasinstrument
+  warum: Bei der Melodica machen durchschlagende Zungen den Ton.
+  orchester: nein
+  ton: "-"
+  gegenteil: ja
+  tonGegenteil: "-"
+- name: Keyboard
+  gruppe: elektronisches Instrument
+  untergruppe: elektronisches Instrument
+  falsch: Tasteninstrument
+  warum: Das Keyboard hat Tasten, aber den Klang erzeugt Elektronik. Es ist ein elektronisches Instrument.
+  orchester: nein
+  ton: "-"
+  gegenteil: ja
+  tonGegenteil: "-"
+- name: E-Gitarre
+  gruppe: elektronisches Instrument
+  untergruppe: elektronisches Instrument
+  falsch: Saiteninstrument
+  warum: Die E-Gitarre hat Saiten, aber ihr Klang braucht Strom und Verstärker. Hier zählt sie zu den elektronischen Instrumenten.
+  orchester: nein
+  ton: "-"
+  gegenteil: ja
+  tonGegenteil: "-"
+- name: E-Bass
+  gruppe: elektronisches Instrument
+  untergruppe: elektronisches Instrument
+  falsch: Saiteninstrument
+  warum: Der E-Bass klingt erst mit Strom und Verstärker. Hier zählt er zu den elektronischen Instrumenten.
+  orchester: nein
+  ton: "-"
+  gegenteil: ja
+  tonGegenteil: "-"

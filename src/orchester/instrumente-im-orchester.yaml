@@ -5,7 +5,7 @@ competencies: [ensembles-besetzungen]
 blocks:
   - type: section
     id: einstieg
-    title: Gitarre im Orchester?
+    title: E-Gitarre im Orchester?
     blocks:
       - type: text
         text: >-
@@ -20,7 +20,7 @@ blocks:
             info: Die E-Gitarre braucht Strom und Verstärker. Sie spielt in Bands, nicht im klassischen Sinfonieorchester.
           - text: Geige
             correct: false
-            info: Geigen sind die größte Gruppe im Orchester. Sie sitzen ganz vorn.
+            info: Geigen sind die größte Gruppe im Orchester.
           - text: Trompete
             correct: false
             info: Trompeten gehören zu den Blechbläsern des Orchesters.
@@ -35,7 +35,7 @@ blocks:
       - type: text
         text: >-
           Ein Sinfonieorchester hat vier Gruppen. Die **Streicher**: Geigen (1. und 2. Violinen), Bratschen, Celli und
-          Kontrabässe. Die **Holzbläser**: Querflöten, Oboen, Klarinetten und Fagotte. Die **Blechbläser**: Waldhörner,
+          Kontrabässe; das Cello heißt auch Violoncello. Die **Holzbläser**: Querflöten, Oboen, Klarinetten und Fagotte. Die **Blechbläser**: Waldhörner,
           Trompeten, Posaunen und Tuba. Dazu **Pauken und Schlagwerk**, zum Beispiel Becken und Triangel. Manchmal
           kommen Harfe, Klavier oder weitere Schlaginstrumente dazu.
       - type: table
@@ -90,13 +90,16 @@ blocks:
         where:
           - "i.orchester != 'manchmal'"
         task:
-          text: "Gehört das Instrument {{i.name}} zum festen Sinfonieorchester?"
+          text: "Instrument: {{i.name}}. Gehört es zum festen Sinfonieorchester?"
         answer:
           value: "i.orchester"
           compare: { choice: [ja, nein] }
-        hint: "Das Orchester hat Streicher, Holzbläser, Blechbläser, Pauken und Schlagwerk. Gehört das Instrument zu einer dieser Gruppen?"
+        mistakes:
+          - value: "i.gegenteil"
+            message: "Schau in die Tabelle: Fest im Orchester sind Geige, Bratsche, Cello, Kontrabass, Querflöte, Oboe, Klarinette, Fagott, Waldhorn, Trompete, Posaune, Tuba, Pauken, Becken und Triangel."
+        hint: "Nicht jedes Holz- oder Blechblasinstrument gehört dazu. Ist das Instrument in der Tabelle der vier Orchestergruppen?"
         steps:
-          - "{{i.name}}: {{answer}}."
+          - "{{i.name}}: {{answer}}. Fest im Orchester sind nur die Instrumente aus der Tabelle der vier Gruppen."
       - type: matching
         id: orchestergruppe-zuordnen
         text: Zu welcher Orchestergruppe gehört das Instrument?
@@ -105,8 +108,8 @@ blocks:
           - { left: Fagott, right: Holzbläser }
           - { left: Waldhorn, right: Blechbläser }
           - { left: Pauken, right: Pauken und Schlagwerk }
-        distractors: [Zupfinstrumente]
-        explanation: Das Waldhorn ist ein Blechblasinstrument, auch wenn es neben den Holzbläsern sitzt.
+        distractors: [Sänger]
+        explanation: Das Waldhorn ist ein Blechblasinstrument, die Pauken haben eine eigene Gruppe mit dem Schlagwerk.
         links:
           - title: Orchester (Wikipedia)
             url: "https://de.wikipedia.org/wiki/Sinfonieorchester"

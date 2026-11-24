@@ -37,9 +37,10 @@ blocks:
           Pauken).
       - type: text
         text: >-
-          Ein Schlaginstrument ist **tonerzeugend**, wenn es bestimmte Tonhöhen hat (Xylophon, Vibraphon, Pauken), sonst
-          **geräuscherzeugend**. Bei **Harmonikainstrumenten** machen durchschlagende Zungen den Ton (Akkordeon,
-          Mundharmonika, Harmonium, Melodica). **Elektronische Instrumente** brauchen Strom (Keyboard, E-Gitarre, E-Bass).
+          Ein Schlaginstrument ist **tonerzeugend**, wenn es bestimmte Tonhöhen hat, auf die man es stimmt (Xylophon,
+          Vibraphon, Pauken), sonst **geräuscherzeugend**. Bei **Harmonikainstrumenten** schwingen kleine Metallzungen
+          im Luftstrom, man nennt sie durchschlagende Zungen (Akkordeon, Mundharmonika, Harmonium, Melodica).
+          **Elektronische Instrumente** klingen erst mit Strom (Keyboard, E-Gitarre, E-Bass).
       - type: figure
         image: images/familien.svg
         alt: "Übersicht der Musikinstrumente in sechs Gruppen, hier mit Blick auf Tasteninstrumente, Schlaginstrumente aus Holz, aus Metall und mit Fell, Harmonikainstrumente und elektronische Instrumente."
@@ -51,8 +52,10 @@ blocks:
         blocks:
           - type: text
             text: >-
-              Pauken sind tonerzeugend: Der Pauker stimmt sie auf bestimmte Töne. Das Akkordeon hat Tasten, gehört aber zu
-              den Harmonikainstrumenten, weil Zungen den Ton machen.
+              Bei diesen Gruppen gilt eine Reihenfolge: Klingt es nur mit Strom, ist es elektronisch. Machen Zungen den
+              Ton, ist es ein Harmonikainstrument, auch mit Tasten (Akkordeon). Sonst gilt: über Tasten gespielt heißt
+              Tasteninstrument, auch wenn innen Saiten oder Pfeifen sind (Klavier, Orgel, Cembalo). Pauken sind
+              tonerzeugend: Der Pauker stimmt sie auf bestimmte Töne.
   - type: section
     id: beispiel
     title: "Beispiel: das Vibraphon"
@@ -76,7 +79,7 @@ blocks:
         where:
           - "i.gruppe != 'Saiteninstrument' and i.gruppe != 'Blasinstrument' and i.gruppe != 'Schlaginstrument'"
         task:
-          text: "Zu welcher Gruppe gehört das Instrument {{i.name}}?"
+          text: "Instrument: {{i.name}}. Zu welcher Gruppe gehört es?"
         answer:
           value: "i.gruppe"
           compare:
@@ -97,13 +100,16 @@ blocks:
         where:
           - "i.gruppe == 'Schlaginstrument'"
         task:
-          text: "Ist das Schlaginstrument {{i.name}} tonerzeugend oder geräuscherzeugend?"
+          text: "Schlaginstrument: {{i.name}}. Ist es tonerzeugend oder geräuscherzeugend?"
         answer:
           value: "i.ton"
           compare: { choice: [tonerzeugend, geräuscherzeugend] }
-        hint: "Kann man darauf eine Melodie mit verschiedenen Tonhöhen spielen? Dann ist es tonerzeugend."
+        mistakes:
+          - value: "i.tonGegenteil"
+            message: "Tonerzeugend sind die Schlaginstrumente mit bestimmten Tonhöhen: Xylophon, Vibraphon und Pauken. Alle anderen hier sind geräuscherzeugend."
+        hint: "Hat es Platten für verschiedene Töne oder stimmt man es auf bestimmte Töne (wie die Pauken)? Dann ist es tonerzeugend."
         steps:
-          - "{{i.name}} ist {{answer}}."
+          - "{{i.name}}: {{answer}}. Tonerzeugend sind hier nur Xylophon, Vibraphon und Pauken."
       - type: matching
         id: material-zuordnen
         text: Aus welchem Material ist der Teil, der schwingt?

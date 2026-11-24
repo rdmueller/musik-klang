@@ -50,7 +50,8 @@ blocks:
         blocks:
           - type: text
             text: >-
-              Nicht das Material zählt, sondern die Tonerzeugung. Querflöte und Saxophon sind aus Metall und trotzdem
+              Bei Saiten- und Blasinstrumenten zählt die Tonerzeugung, nicht das Material. Querflöte und Saxophon sind
+              meist aus Metall und trotzdem
               Holzblasinstrumente. Die Harfe hat Saiten, aber keinen Bogen: Sie ist ein Zupfinstrument.
   - type: section
     id: beispiel
@@ -76,7 +77,7 @@ blocks:
           - { left: Saiten werden gezupft, right: Zupfinstrumente }
           - { left: Luft an einer Kante oder ein Rohrblatt, right: Holzblasinstrumente }
           - { left: Lippen schwingen im Mundstück, right: Blechblasinstrumente }
-        distractors: [Tasteninstrumente]
+        distractors: [Schlaginstrumente]
         explanation: Saiten werden gestrichen oder gezupft; bei Blasinstrumenten entscheidet, was am Mundstück schwingt.
         links:
           - title: Streichinstrument (Wikipedia)
@@ -88,7 +89,7 @@ blocks:
         where:
           - "i.gruppe == 'Saiteninstrument' or i.gruppe == 'Blasinstrument'"
         task:
-          text: "Zu welcher Untergruppe gehört das Instrument {{i.name}}?"
+          text: "Instrument: {{i.name}}. Zu welcher Untergruppe gehört es?"
         answer:
           value: "i.untergruppe"
           compare: { choice: [Streichinstrument, Zupfinstrument, Holzblasinstrument, Blechblasinstrument] }
@@ -131,9 +132,9 @@ blocks:
           - text: Streichinstrumente
             correct: false
             info: Streichinstrumente werden mit einem Bogen gespielt. Die Harfe hat keinen Bogen.
-          - text: Tasteninstrumente
+          - text: Blasinstrumente
             correct: false
-            info: Tasteninstrumente spielt man über Tasten. Die Harfe hat keine Tasten.
+            info: In ein Blasinstrument bläst man hinein. Die Harfe hat Saiten.
         explanation: Saiten allein sagen noch nicht, ob gestrichen oder gezupft wird. Bei der Harfe wird gezupft.
         links:
           - title: Zupfinstrument (Wikipedia)

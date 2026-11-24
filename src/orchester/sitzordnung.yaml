@@ -37,10 +37,11 @@ blocks:
           So sitzt ein Sinfonieorchester mittlerer Größe. Links und rechts gelten so, wie Publikum und Dirigent auf das
           Orchester schauen; im Bild sitzt das Publikum unten. Der Dirigent steht vorn in der Mitte. Um ihn herum
           sitzen im Halbkreis die **Streicher**, von links nach rechts: 1. Violinen, 2. Violinen, Bratschen,
-          Violoncelli und ganz rechts die Kontrabässe. Die Geigen sind zwei Gruppen, weil sie verschiedene Stimmen
-          spielen. Im Ring dahinter sitzen links die **Holzbläser** (von außen zur Mitte: Flöten, Oboen, Klarinetten,
-          Fagotte) und rechts die **Blechbläser** (von der Mitte nach außen: Hörner, Trompeten, Posaunen). Ganz hinten
-          in der Mitte stehen die **Pauken**.
+          Violoncelli (Celli) und ganz rechts die Kontrabässe. Die Geigen sind zwei Gruppen, weil sie verschiedene Stimmen
+          spielen. Im Ring dahinter sitzen links die **Holzbläser** (von außen zur Mitte: Querflöten, Oboen,
+          Klarinetten, Fagotte) und rechts die **Blechbläser** (von der Mitte nach außen: Waldhörner, Trompeten,
+          Posaunen; die Tuba sitzt bei den Posaunen). Ganz hinten in der Mitte stehen die **Pauken**, daneben das
+          übrige Schlagwerk.
       - type: labelled-figure
         image: images/sitzplan.svg
         alt: "Sitzplan eines Sinfonieorchesters von oben: vorn der Dirigent, im inneren Halbkreis blau die Streicher, dahinter links grün die Holzbläser, rechts gelb die Blechbläser, ganz hinten rot die Pauken."
@@ -49,7 +50,7 @@ blocks:
           - { x: 50, y: 70, marker: "1", text: Streicher }
           - { x: 25, y: 55, marker: "2", text: Holzbläser }
           - { x: 72, y: 55, marker: "3", text: Blechbläser }
-          - { x: 50, y: 17.7, marker: "4", text: Pauken }
+          - { x: 50, y: 17.7, marker: "4", text: Pauken und Schlagwerk }
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: note
@@ -58,7 +59,7 @@ blocks:
           - type: text
             text: >-
               Die Hörner gehören zu den Blechbläsern, auch wenn sie neben den Holzbläsern sitzen. Diese Aufstellung mit
-              beiden Geigengruppen links heißt amerikanische Aufstellung; sie ist heute weltweit üblich. Bei der älteren
+              beiden Geigengruppen links heißt amerikanische Aufstellung; sie ist heute weit verbreitet. Bei der älteren
               deutschen Aufstellung sitzen die 2. Violinen rechts, gegenüber den 1. Violinen.
   - type: section
     id: beispiel
@@ -139,7 +140,7 @@ blocks:
           - text: die Kontrabässe
             correct: false
             info: Die Kontrabässe sitzen vorn im Halbkreis der Streicher, ganz rechts.
-        explanation: Die Hörner sitzen genau zwischen Holzbläsern und Blechbläsern, hinten in der Mitte.
+        explanation: Die Hörner sitzen hinten in der Mitte, zwischen den Holzbläsern und den übrigen Blechbläsern.
         links:
           - title: Orchester (Wikipedia)
             url: "https://de.wikipedia.org/wiki/Sinfonieorchester"
@@ -149,7 +150,7 @@ blocks:
         options:
           - text: die Violoncelli
             correct: true
-            info: Rechts von den Bratschen in der Mitte sitzen die Violoncelli, ganz außen dann die Kontrabässe.
+            info: Die Bratschen sitzen in der Mitte, rechts neben ihnen die Violoncelli, ganz außen dann die Kontrabässe.
           - text: die 2. Violinen
             correct: false
             info: Die 2. Violinen sitzen links neben den Bratschen, neben den 1. Violinen.
