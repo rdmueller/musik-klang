@@ -1,0 +1,130 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Tasten-, Schlag-, Harmonika- und elektronische Instrumente
+description: "Die übrigen vier Gruppen: Tasten-, Schlag-, Harmonika- und elektronische Instrumente, und ob ein Schlaginstrument Töne oder Geräusche macht."
+competencies: [instrumentenfamilien]
+blocks:
+  - type: section
+    id: einstieg
+    title: Hat eine Trommel einen Ton?
+    blocks:
+      - type: text
+        text: >-
+          Auf dieser Seite lernst du die übrigen vier Instrumentengruppen kennen. Du kennst schon die Saiten- und
+          Blasinstrumente. Denk an eine Trommel und ein Xylophon:
+      - type: single-choice
+        id: einstieg-melodie
+        text: Auf welchem der beiden Instrumente kannst du eine Melodie spielen?
+        options:
+          - text: auf dem Xylophon
+            correct: true
+            info: Jede Platte des Xylophons hat eine bestimmte Tonhöhe. So entsteht eine Melodie.
+          - text: auf der Trommel
+            correct: false
+            info: Die Trommel klingt bei jedem Schlag ungefähr gleich hoch. Sie macht ein Geräusch, keinen bestimmten Ton.
+        explanation: Schlaginstrumente mit bestimmter Tonhöhe heißen tonerzeugend, die anderen geräuscherzeugend.
+        links:
+          - title: Schlaginstrument (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Schlaginstrument"
+  - type: section
+    id: regel
+    title: Vier weitere Gruppen
+    blocks:
+      - type: text
+        text: >-
+          **Tasteninstrumente** spielt man über Tasten: Klavier und Flügel, Orgel, Cembalo. **Schlaginstrumente** werden
+          geschlagen, geschüttelt oder gerieben. Man teilt sie nach dem Material, das schwingt: aus Holz (Claves,
+          Maracas, Xylophon), aus Metall (Triangel, Becken, Kuhglocke, Vibraphon), mit Fell (Trommel, Congas, Bongos,
+          Pauken).
+      - type: text
+        text: >-
+          Ein Schlaginstrument ist **tonerzeugend**, wenn es bestimmte Tonhöhen hat (Xylophon, Vibraphon, Pauken), sonst
+          **geräuscherzeugend**. Bei **Harmonikainstrumenten** machen durchschlagende Zungen den Ton (Akkordeon,
+          Mundharmonika, Harmonium, Melodica). **Elektronische Instrumente** brauchen Strom (Keyboard, E-Gitarre, E-Bass).
+      - type: figure
+        image: images/familien.svg
+        alt: "Übersicht der Musikinstrumente in sechs Gruppen, hier mit Blick auf Tasteninstrumente, Schlaginstrumente aus Holz, aus Metall und mit Fell, Harmonikainstrumente und elektronische Instrumente."
+        caption: Die sechs Gruppen; auf dieser Seite die unteren vier Kästen.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: >-
+              Pauken sind tonerzeugend: Der Pauker stimmt sie auf bestimmte Töne. Das Akkordeon hat Tasten, gehört aber zu
+              den Harmonikainstrumenten, weil Zungen den Ton machen.
+  - type: section
+    id: beispiel
+    title: "Beispiel: das Vibraphon"
+    blocks:
+      - type: example
+        title: Wie ordnest du das Vibraphon ein?
+        blocks:
+          - type: text
+            text: |
+              1. Man schlägt mit Schlägeln auf Platten: ein Schlaginstrument.
+              2. Die Platten sind aus Metall: Untergruppe **aus Metall**.
+              3. Jede Platte hat eine bestimmte Tonhöhe: Es ist **tonerzeugend**.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: gruppe-bestimmen
+        given:
+          i: { pick: 1, from: { data: instrumente } }
+        where:
+          - "i.gruppe != 'Saiteninstrument' and i.gruppe != 'Blasinstrument' and i.gruppe != 'Schlaginstrument'"
+        task:
+          text: "Zu welcher Gruppe gehört das Instrument {{i.name}}?"
+        answer:
+          value: "i.gruppe"
+          compare:
+            {
+              choice:
+                [Tasteninstrument, Harmonikainstrument, elektronisches Instrument, Saiteninstrument, Blasinstrument],
+            }
+        mistakes:
+          - value: "i.falsch"
+            message: "{{i.warum}}"
+        hint: "Frag dich: Wie macht das Instrument seinen Ton, über Tasten, mit Zungen oder mit Strom?"
+        steps:
+          - "{{i.warum}} Gruppe: {{answer}}."
+      - type: generated
+        id: ton-oder-geraeusch
+        given:
+          i: { pick: 1, from: { data: instrumente } }
+        where:
+          - "i.gruppe == 'Schlaginstrument'"
+        task:
+          text: "Ist das Schlaginstrument {{i.name}} tonerzeugend oder geräuscherzeugend?"
+        answer:
+          value: "i.ton"
+          compare: { choice: [tonerzeugend, geräuscherzeugend] }
+        hint: "Kann man darauf eine Melodie mit verschiedenen Tonhöhen spielen? Dann ist es tonerzeugend."
+        steps:
+          - "{{i.name}} ist {{answer}}."
+      - type: matching
+        id: material-zuordnen
+        text: Aus welchem Material ist der Teil, der schwingt?
+        pairs:
+          - { left: Claves, right: aus Holz }
+          - { left: Becken, right: aus Metall }
+          - { left: Bongos, right: mit Fell }
+        distractors: [aus Glas]
+        explanation: Claves sind Holzstäbe, Becken Metallscheiben, Bongos haben ein gespanntes Fell.
+        links:
+          - title: Schlaginstrument (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Schlaginstrument"
+      - type: true-false
+        id: akkordeon-taste
+        text: Das Akkordeon ist ein Tasteninstrument, weil es Tasten hat.
+        answer: false
+        explanation: Das Akkordeon hat Tasten, aber den Ton machen durchschlagende Zungen. Darum ist es ein Harmonikainstrument.
+        links:
+          - title: Harmonikainstrument (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Harmonikainstrument"
+      - type: text
+        text: >-
+          Jetzt kennst du alle sechs Gruppen. Als Nächstes schaust du, welche dieser Instrumente im Sinfonieorchester
+          spielen.
