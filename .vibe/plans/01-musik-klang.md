@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: explore
+phase: plan
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -142,9 +142,10 @@ Strang `musik/klang`. Sätze wörtlich von der Karte.
       off), and which misconception the feedback catches.
 - [x] Write under "Notes" the scope: what is in, what is out and why, the data range (for example "all main-group
       elements", never a silent "1–20"), the languages.
-- [ ] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
+- [x] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
       approach, the scope, every "(guess)", the sources and what is unchecked, the archetype and its reason. Stop and
       wait. Changes: change them, then ask again.
+      Creator: passt so
 
 ### Answers
 
@@ -159,6 +160,7 @@ Strang `musik/klang`. Sätze wörtlich von der Karte.
   - Abgedeckt durch die Antwort zur ersten App: „all diese Sachen sind mir wichtig.“ Vorbild: die Schwester-Apps (guess).
   visualisations, game feel).
 - Hurdles: misconceptions and mistakes of the learners; the creator's examples and experiments.
+  - „passt so“ zu: Saxophon/Querflöte als Blechbläser, Harfe als Streichinstrument, Pauken als geräuscherzeugend, Bratschen und Celli im Sitzplan vertauscht, Hörner als Holzbläser.
 - Content: who writes it (creator, you, from sources); own material (worksheets, tests).
   - Material des Erstellers (zwei Arbeitsblätter, lokal). Vorschlag mit fünf Seiten und Untergruppen der Schlaginstrumente „aus Holz, aus Metall, mit Fell“ – Antwort: „passt so“. Inhalte schreibe ich aus Quellen nach dem Aufbau des Materials.
 - Amount: how much content in the first version; what comes later.
@@ -168,7 +170,9 @@ Strang `musik/klang`. Sätze wörtlich von der Karte.
 - Look and feel: calm like a worksheet, or like a game (colours, praise, effects); dark mode.
   - fixed by the archetype (explainer)
 - Terms: the creator's words for the main things in the app, used everywhere.
+  - Untergruppen der Schlaginstrumente „aus Holz, aus Metall, mit Fell“: „passt so“. Instrumentennamen wie im Material: Geige (Violine), Bratsche, Cello (Violoncello), Kontrabass, Waldhorn (Horn) (guess).
 - Finding the app: what teachers and parents would search for.
+  - Vorschlag: „Orchesteraufbau“, „Sitzordnung Orchester“, „Instrumentengruppen“, „Holzblasinstrumente Blechblasinstrumente“, „Musikinstrumente Klasse 8“ – Antwort: „passt so“.
 
 ## Plan
 
@@ -179,28 +183,71 @@ Strang `musik/klang`. Sätze wörtlich von der Karte.
 
 ### Tasks
 
-- [ ] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
+- [x] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
       "Content method".
-- [ ] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
-- [ ] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
+- [x] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
+- [x] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
       opening task, the change of activity, the reward, the story.
-- [ ] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
+- [x] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
       screen, `npx --no -- lernapps plan add --at pattern "<task>"`. Then the others, one call each:
       `npx --no -- lernapps plan add --at pages "<task>"`. Each task says what it builds and what it shows.
-- [ ] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
+- [x] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
       learners see after each. Keep the files in `.vibe/sketches/`.
-- [ ] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
+- [x] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
       plain words (what learners see and do, what the app cannot do). At most 2 questions.
 - [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
       them, then ask again.
 
 ### Content method
 
-<!-- One line each: the patterns and where; the figures and how they are made; the data files; each component, what it
-checks and what it cannot; how a later agent adds a chapter. It becomes the content guide in Code. -->
-<!-- An explainer: per figure, model and component its learning action in two to four sentences
-(`explainer-representation-explained`); per page its prerequisites the app does not practise, and which get a recap
-page, which a link. -->
+#### Aufbau
+
+`strand: musik/klang`, ein Kapitel `orchester`, Abschnitte `einstieg`, `regel`, `beispiel`, `uebung` wie in den
+Schwester-Apps; Anrede „du“; keine Geschichte; keine eigene Komponente.
+
+| Seite (id) | Kompetenz | Voraussetzungen, die die App nicht übt |
+|---|---|---|
+| `das-brauchst-du` | recap `klangquellen-unterscheiden`, `schwingung` | – |
+| `saiten-und-blasinstrumente` | `instrumentenfamilien` | `schwingung` → Wiederholung |
+| `weitere-instrumente` | `instrumentenfamilien` | – |
+| `instrumente-im-orchester` | `ensembles-besetzungen` | – |
+| `sitzordnung` | `ensembles-besetzungen` | – |
+
+Selbsteinschätzung im Kapitel (Probetest), 2–3 `generated` oder Zuordnungen je Inhaltsseite.
+
+#### Datendatei
+
+`src/data/instrumente.yaml`: je Instrument `name`, `gruppe` (Saiteninstrument, Blasinstrument, Tasteninstrument,
+Schlaginstrument, Harmonikainstrument, elektronisches Instrument), `untergruppe` (Streichinstrument, Zupfinstrument,
+Holzblasinstrument, Blechblasinstrument, aus Holz, aus Metall, mit Fell, sonst = gruppe), `orchester` (ja/nein),
+`ton` (tonerzeugend/geräuscherzeugend, nur Schlaginstrumente), `warum` (ein Satz zur Tonerzeugung). Nur die
+Instrumente des Materials.
+
+#### Muster je Seite
+
+| Seite | Übungen |
+|---|---|
+| `saiten-und-blasinstrumente` | `generated` „Zu welcher Untergruppe gehört {{i.name}}?“ (Auswahl, aus Saiten- und Blasinstrumenten); `matching` Tonerzeugung ↔ Untergruppe; `multiple-choice` „Welche sind Holzblasinstrumente?“ (mit Saxophon, Querflöte); `single-choice` Harfe |
+| `weitere-instrumente` | `generated` Gruppe eines Instruments (alle Gruppen); `generated` tonerzeugend oder geräuscherzeugend; `matching` Schlaginstrument ↔ Material; `true-false` |
+| `instrumente-im-orchester` | `generated` „Gehört {{i.name}} ins Sinfonieorchester?“; `matching` Instrument ↔ Orchestergruppe; `multiple-choice` Blechbläser des Orchesters; `number` „Wie viele Gruppen hat das Orchester?“ |
+| `sitzordnung` | `labelled-figure` des Sitzplans (A–L) als `material` eines `matching` mit `pairsFrom: material`; `ordering` von vorn nach hinten; `single-choice` Platz der Pauken; `single-choice` Bratschen/Celli |
+
+#### Figuren
+
+- `src/images/sitzplan.svg` (selbst gezeichnet, CC BY 4.0): Bühne von oben, Halbkreise, Felder mit Buchstaben;
+  Dirigentenpult vorn. Auf der Regel-Seite mit Namen (`labelled-figure` mit Legende), in der Übung nur Buchstaben.
+- `src/images/familien.svg`: Baum der Gruppen und Untergruppen (Text-Kästen), ohne Bilder von Instrumenten.
+
+#### Engagement
+
+- Saiten/Blas: „Ist das Saxophon aus Holz?“ · ordnen, entscheiden · „Du ordnest nach der Tonerzeugung“.
+- Weitere: „Hat eine Trommel einen Ton?“ · zuordnen, entscheiden · „Du kennst alle sechs Gruppen“.
+- Orchester: „Gehört die Gitarre ins Sinfonieorchester?“ · zuordnen · „Du nennst die vier Orchestergruppen“.
+- Sitzordnung: „Wo sitzen die lauten Instrumente?“ · beschriften, ordnen · Rückblick und Probetest.
+
+#### Was die App nicht kann
+
+Keine Klänge, keine Bilder von Instrumenten, keine Band, kein Chor.
 
 ## Code
 
@@ -225,11 +272,16 @@ page, which a link. -->
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
 - [ ] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-<!-- tasks: pattern: the one page or screen that is the pattern for the others -->
+- [ ] Musterseite orchester/sitzordnung: Sitzplan-SVG, labelled-figure mit Legende in der Regel, matching mit pairsFrom material, ordering, single-choice
+<!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-<!-- tasks: pages: the other pages or screens, after the pattern -->
+- [ ] Kapitel orchester: Wiederholungsseite das-brauchst-du (recap klangquellen-unterscheiden, schwingung)
+- [ ] Seite orchester/saiten-und-blasinstrumente: Datendatei instrumente.yaml, Familien-Baum, generated Untergruppe, matching, multiple-choice, single-choice
+- [ ] Seite orchester/weitere-instrumente: generated Gruppe und tonerzeugend/geräuscherzeugend, matching Material, true-false
+- [ ] Seite orchester/instrumente-im-orchester: generated Orchester ja/nein, matching Orchestergruppe, multiple-choice, number; Selbsteinschätzung des Kapitels
+<!-- tasks: pages (4 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
 - [ ] Run `npx --no -- lernapps check` until it passes.
 - [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
