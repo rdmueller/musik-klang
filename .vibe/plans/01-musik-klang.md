@@ -33,6 +33,22 @@ For you, the assistant. The process is in AGENTS.md; this plan holds the method.
 
 ## Notes
 
+### Material des Erstellers (bleibt lokal, wird nicht committet) und Lernlandkarte
+
+Der Ersteller hat zwei Arbeitsblätter gezeigt (Fotos, nur in dieser Sitzung): einen Sitzplan „Sinfonieorchester
+mittlerer Größe“ zum Beschriften und eine Liste der Musikinstrumente mit Überschriften zum Ergänzen. Daraus
+abgeleitet, ohne Wortlaut:
+
+- Instrumentengruppen mit Untergruppen: Saiteninstrumente (Streich-, Zupfinstrumente), Blasinstrumente (Holz-,
+  Blechblasinstrumente), Tasteninstrumente, Schlaginstrumente (drei Untergruppen, nach Material; tonerzeugend oder
+  geräuscherzeugend), Harmonikainstrumente, elektronische Instrumente; dazu: welche Instrumente gehören ins Orchester.
+- Sitzordnung: Streicher vorn (1. und 2. Violinen links, Bratschen Mitte, Violoncelli rechts, Kontrabässe ganz
+  rechts), Holzbläser dahinter links (Flöten, Oboen, Klarinetten, Fagotte), Blechbläser dahinter rechts (Hörner,
+  Trompeten, Posaunen), Pauken ganz hinten in der Mitte, Dirigent vorn in der Mitte.
+- Kompetenzen der Karte (Strang `musik/klang`, Richtstufe 5-6): `instrumentenfamilien` (Schritt 3),
+  `ensembles-besetzungen` (Schritt 4); Voraussetzungen `klangquellen-unterscheiden`, `schwingung` → Wiederholung.
+- Keine dieser Kompetenzen übt bisher eine App.
+
 <!-- Strand or subject, competencies by chapter (ids), didactic approach, scope, sources and licences, open questions. -->
 
 ## Explore
