@@ -33,6 +33,7 @@ sitzt.
 
 - Archetyp `explainer` wie die Schwester-Apps: Erklärseiten, Zuordnen mit immer neuen Instrumenten, Sitzplan als
   beschriftete Figur, Selbsteinschätzung als Probetest; ohne eigene Komponente.
+- Selbsteinschätzung im Kapitel, 9 Aufgaben auf 3 Schritten (je Inhaltsseite 2), der Probetest; ein Durchlauf bis zum Ergebnis im Lernenden-Check.
 - Kein `scope`: keine `open-task`; das Material des Erstellers bleibt lokal, die App übernimmt nur seinen Aufbau.
 - Name `musik-klang`: Schema `musik-<Strang>`.
 
@@ -313,9 +314,9 @@ Keine Klänge, keine Bilder von Instrumenten, keine Band, kein Chor.
 
 ### Tasks
 
-- [ ] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
+- [x] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
       decisions" why the app has none. Commit.
-- [ ] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
+- [x] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
       every click only the creator can make, in one message.
 - [ ] Push `work`, open the preview pull request and see its checks to green, as skill `lernapps-github` says.
 - [ ] **Checkpoint:** publish. Show what the app does and the preview link from the comment "Vorschau der App". Ask
