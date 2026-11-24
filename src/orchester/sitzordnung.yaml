@@ -1,0 +1,154 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Die Sitzordnung im Orchester
+description: "Wo im Sinfonieorchester wer sitzt: Streicher vorn, Holzbläser und Blechbläser dahinter, Pauken ganz hinten."
+competencies: [ensembles-besetzungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Laut nach hinten?
+    blocks:
+      - type: text
+        text: >-
+          Auf dieser Seite lernst du, wo im Sinfonieorchester welche Instrumente sitzen. Du kennst die vier Gruppen des
+          Orchesters: Streicher, Holzbläser, Blechbläser, Pauken und Schlagwerk. Überleg zuerst:
+      - type: single-choice
+        id: einstieg-laut
+        text: Trompeten und Posaunen sind sehr laut, Geigen eher leise. Wo sitzen die lauten Blechbläser wohl?
+        options:
+          - text: Hinten, weiter weg vom Publikum
+            correct: true
+            info: Laute Instrumente sitzen hinten. So übertönen sie die leiseren Streicher vorn nicht.
+          - text: Ganz vorn, direkt beim Publikum
+            correct: false
+            info: Dann würde man die Geigen kaum noch hören. Vorn sitzen die leiseren Streicher.
+          - text: Mitten zwischen den Geigen
+            correct: false
+            info: Die Gruppen sitzen zusammen, damit sie gut aufeinander hören können. Gemischt wird nicht.
+        explanation: Als Merkhilfe gilt, leise Instrumente vorn, laute hinten. Jede Gruppe sitzt zusammen.
+        links:
+          - title: Orchester (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Sinfonieorchester"
+  - type: section
+    id: regel
+    title: Vorn die Streicher, hinten die Bläser
+    blocks:
+      - type: text
+        text: >-
+          Der Dirigent steht vorn in der Mitte. Um ihn herum sitzen im Halbkreis die **Streicher**, von links nach
+          rechts: 1. Violinen, 2. Violinen, Bratschen, Violoncelli und ganz rechts die Kontrabässe. Dahinter sitzen
+          links die **Holzbläser** (von links: Flöten, Oboen, Klarinetten, Fagotte) und rechts die **Blechbläser** (von
+          der Mitte nach rechts: Hörner, Trompeten, Posaunen). Ganz hinten in der Mitte stehen die **Pauken**.
+      - type: labelled-figure
+        image: images/sitzplan.svg
+        alt: "Sitzplan eines Sinfonieorchesters von oben: vorn der Dirigent, im inneren Halbkreis blau die Streicher, dahinter links grün die Holzbläser, rechts gelb die Blechbläser, ganz hinten rot die Pauken."
+        caption: Die vier Gruppen im Sitzplan. Wer in einer Gruppe wo sitzt, steht im Text darüber.
+        labels:
+          - { x: 50, y: 70, marker: S, text: Streicher }
+          - { x: 25, y: 55, marker: H, text: Holzbläser }
+          - { x: 72, y: 55, marker: B, text: Blechbläser }
+          - { x: 50, y: 17.7, marker: P, text: Pauken }
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: >-
+              Die Bratschen sitzen in der Mitte, die Violoncelli rechts davon. Die Hörner gehören zu den Blechbläsern und
+              sitzen hinten in der Mitte, neben den Holzbläsern. Diese Aufstellung heißt amerikanische Aufstellung. Bei
+              der älteren deutschen Aufstellung sitzen die 2. Violinen rechts, gegenüber den 1. Violinen.
+  - type: section
+    id: beispiel
+    title: "Beispiel: der Platz der Fagotte"
+    blocks:
+      - type: example
+        title: Wo sitzen die Fagotte?
+        blocks:
+          - type: text
+            text: |
+              1. Das Fagott ist ein Holzblasinstrument, also sitzt es in der hinteren Reihe links.
+              2. Die Holzbläser sitzen von links nach rechts: Flöten, Oboen, Klarinetten, Fagotte.
+              3. Die Fagotte sitzen also ganz rechts bei den Holzbläsern, **hinten in der Mitte**, direkt neben den Hörnern.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: matching
+        id: streicher-beschriften
+        text: Welche Streicher sitzen an den Plätzen A bis E?
+        material:
+          - type: labelled-figure
+            image: images/sitzplan-leer.svg
+            alt: "Leerer Sitzplan eines Sinfonieorchesters von oben, Dirigent vorn in der Mitte. Im inneren Halbkreis fünf Plätze, von links nach rechts mit A, B, C, D und E markiert."
+            caption: Die Plätze im inneren Halbkreis, von links nach rechts.
+            legend: false
+            labels:
+              - { x: 32, y: 79.1, marker: A, text: 1. Violinen }
+              - { x: 39.4, y: 66.3, marker: B, text: 2. Violinen }
+              - { x: 50, y: 62, marker: C, text: Bratschen }
+              - { x: 60.6, y: 66.3, marker: D, text: Violoncelli }
+              - { x: 68, y: 79.1, marker: E, text: Kontrabässe }
+            source: eigene Zeichnung
+            licence: CC-BY-4.0
+        pairsFrom: material
+        explanation: "Von links nach rechts: 1. Violinen, 2. Violinen, Bratschen, Violoncelli, Kontrabässe."
+        links:
+          - title: Amerikanische Aufstellung (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Amerikanische_Aufstellung"
+      - type: matching
+        id: blaeser-beschriften
+        text: Wer sitzt an den Plätzen F bis N?
+        material:
+          - type: labelled-figure
+            image: images/sitzplan-leer.svg
+            alt: "Leerer Sitzplan eines Sinfonieorchesters von oben. In der hinteren Reihe links vier Plätze F, G, H, I, rechts drei Plätze K, L, M, ganz hinten in der Mitte Platz N."
+            caption: Die Plätze der hinteren Reihe und ganz hinten.
+            legend: false
+            labels:
+              - { x: 13.7, y: 77.5, marker: F, text: Flöten }
+              - { x: 19.5, y: 59.4, marker: G, text: Oboen }
+              - { x: 29.8, y: 46, marker: H, text: Klarinetten }
+              - { x: 42.9, y: 38.9, marker: I, text: Fagotte }
+              - { x: 59, y: 39.5, marker: K, text: Hörner }
+              - { x: 74.8, y: 50.7, marker: L, text: Trompeten }
+              - { x: 85.4, y: 72.9, marker: M, text: Posaunen }
+              - { x: 50, y: 17.7, marker: N, text: Pauken }
+            source: eigene Zeichnung
+            licence: CC-BY-4.0
+        pairsFrom: material
+        explanation: "Links die Holzbläser (Flöten, Oboen, Klarinetten, Fagotte), rechts die Blechbläser (Hörner, Trompeten, Posaunen), ganz hinten die Pauken."
+        links:
+          - title: Orchester (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Sinfonieorchester"
+      - type: ordering
+        id: vorn-nach-hinten
+        text: Ordne die Gruppen vom Dirigenten aus nach hinten.
+        items: [Streicher, Holzbläser und Blechbläser, Pauken]
+        explanation: Vorn die leisen Streicher, dahinter die Bläser, ganz hinten die Pauken.
+        links:
+          - title: Orchester (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Sinfonieorchester"
+      - type: single-choice
+        id: bratschen-celli
+        text: Wer sitzt vom Dirigenten aus gesehen direkt rechts neben den Bratschen?
+        options:
+          - text: die Violoncelli
+            correct: true
+            info: Rechts von den Bratschen in der Mitte sitzen die Violoncelli, ganz außen dann die Kontrabässe.
+          - text: die 2. Violinen
+            correct: false
+            info: Die 2. Violinen sitzen links neben den Bratschen, neben den 1. Violinen.
+          - text: die Kontrabässe
+            correct: false
+            info: Die Kontrabässe sitzen ganz rechts außen, hinter den Violoncelli.
+          - text: die Hörner
+            correct: false
+            info: Die Hörner sitzen in der hinteren Reihe, nicht im Halbkreis der Streicher.
+        explanation: "Streicher von links nach rechts: 1. Violinen, 2. Violinen, Bratschen, Violoncelli, Kontrabässe."
+        links:
+          - title: Amerikanische Aufstellung (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Amerikanische_Aufstellung"
+      - type: text
+        text: >-
+          Geschafft: Du kennst die Instrumentengruppen und weißt, wo im Orchester wer sitzt. Prüf jetzt mit der
+          Selbsteinschätzung auf der Startseite, deinem Probetest, was schon sitzt.

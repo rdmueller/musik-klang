@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 format: 2
-# The strand of the learning map the app stays in, <subject>/<strand> (e.g. mathematik/stochastik); then each page
-# names its competencies. none: the app is on no strand, and no page names competencies. A unit app across the strands
-# of a subject whose map allows it names subject: <subject> (e.g. franzoesisch) instead of strand.
-strand: none
-title: Platzhalter
-intro: Dieses Kapitel hält den Platz frei, bis der geplante Inhalt da ist.
+strand: musik/klang
+title: "Orchesteraufbau: Instrumente und Sitzordnung"
+intro: >-
+  Du ordnest Instrumente danach, wie ihr Ton entsteht, lernst die Instrumente des Sinfonieorchesters kennen und weißt,
+  wo im Orchester wer sitzt. Am Ende zeigt dir die Selbsteinschätzung auf der Startseite, dein Probetest, was schon
+  sitzt.
 languages: [de]
-chapters: [thema]
+chapters: [orchester]

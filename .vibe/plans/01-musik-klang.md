@@ -33,6 +33,7 @@ sitzt.
 
 - Archetyp `explainer` wie die Schwester-Apps: Erklärseiten, Zuordnen mit immer neuen Instrumenten, Sitzplan als
   beschriftete Figur, Selbsteinschätzung als Probetest; ohne eigene Komponente.
+- Kein `scope`: keine `open-task`; das Material des Erstellers bleibt lokal, die App übernimmt nur seinen Aufbau.
 - Name `musik-klang`: Schema `musik-<Strang>`.
 
 ## Notes
@@ -266,14 +267,14 @@ Keine Klänge, keine Bilder von Instrumenten, keine Band, kein Chor.
       `npx --no -- lernapps create --archetype explainer`.
 - [x] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method": every heading,
       no "FILL IN" left. Commit it before any content.
-- [ ] Load skill `lernapps-explainer`.
-- [ ] Load skill `lernapps-content-questions`. Read whole, with your file tool:
+- [x] Load skill `lernapps-explainer`.
+- [x] Load skill `lernapps-content-questions`. Read whole, with your file tool:
       `.agents/skills/lernapps-explainer/references/blocks.md` and
       `.agents/skills/lernapps-explainer/references/exercises.md`. A foreign language: also
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
-- [ ] Decide whether the app needs `scope`, as "`scope`" in
+- [x] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-- [ ] Musterseite orchester/sitzordnung: Sitzplan-SVG, labelled-figure mit Legende in der Regel, matching mit pairsFrom material, ordering, single-choice
+- [x] Musterseite orchester/sitzordnung: Sitzplan-SVG, labelled-figure mit Legende in der Regel, matching mit pairsFrom material, ordering, single-choice
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
