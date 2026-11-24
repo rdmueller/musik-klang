@@ -1,0 +1,145 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Saiten- und Blasinstrumente
+description: "Streich- und Zupfinstrumente, Holz- und Blechblasinstrumente: eingeteilt danach, wie der Ton entsteht."
+competencies: [instrumentenfamilien]
+blocks:
+  - type: section
+    id: einstieg
+    title: Ist das Saxophon aus Holz?
+    blocks:
+      - type: text
+        text: >-
+          Auf dieser Seite lernst du, Saiten- und Blasinstrumente in ihre Untergruppen einzuordnen. Du weißt schon, dass
+          ein Klang entsteht, wenn etwas schwingt. Das Saxophon ist aus glänzendem Metall. Was meinst du?
+      - type: single-choice
+        id: einstieg-saxophon
+        text: Zu welchen Blasinstrumenten zählt das Saxophon?
+        options:
+          - text: zu den Holzblasinstrumenten
+            correct: true
+            info: Beim Saxophon schwingt ein Rohrblatt am Mundstück, wie bei der Klarinette. Darauf kommt es an, nicht auf das Metall.
+          - text: zu den Blechblasinstrumenten
+            correct: false
+            info: Das klingt nach dem Material. Eingeteilt wird aber nach der Tonerzeugung, und beim Saxophon schwingt ein Rohrblatt.
+        explanation: Instrumente teilt man danach ein, wie der Ton entsteht, nicht danach, woraus sie gebaut sind.
+        links:
+          - title: Holzblasinstrument (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Holzblasinstrument"
+  - type: section
+    id: regel
+    title: Was schwingt, und wie?
+    blocks:
+      - type: text
+        text: >-
+          Bei **Saiteninstrumenten** schwingen Saiten. Werden sie mit einem Bogen gestrichen, sind es
+          **Streichinstrumente** (Geige, Bratsche, Cello, Kontrabass). Werden sie mit den Fingern gezupft, sind es
+          **Zupfinstrumente** (Gitarre, Harfe, Zither). Bei **Blasinstrumenten** schwingt die Luft im Rohr.
+      - type: text
+        text: >-
+          Bei **Holzblasinstrumenten** bringt die Luft an einer Kante oder ein Rohrblatt die Luftsäule zum Schwingen
+          (Querflöte, Blockflöte, Klarinette, Oboe, Fagott, Saxophon). Bei **Blechblasinstrumenten** schwingen die
+          Lippen im Mundstück (Trompete, Waldhorn, Posaune, Tuba).
+      - type: figure
+        image: images/familien.svg
+        alt: "Übersicht der Musikinstrumente in sechs Gruppen: Saiteninstrumente mit Streich- und Zupfinstrumenten, Blasinstrumente mit Holz- und Blechblasinstrumenten, Tasteninstrumente, Schlaginstrumente aus Holz, aus Metall und mit Fell, Harmonikainstrumente, elektronische Instrumente."
+        caption: Alle sechs Gruppen auf einen Blick. Auf dieser Seite geht es um die ersten beiden; die anderen kommen auf der nächsten Seite.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: >-
+              Bei Saiten- und Blasinstrumenten zählt die Tonerzeugung, nicht das Material. Querflöte und Saxophon sind
+              meist aus Metall und trotzdem
+              Holzblasinstrumente. Die Harfe hat Saiten, aber keinen Bogen: Sie ist ein Zupfinstrument.
+  - type: section
+    id: beispiel
+    title: "Beispiel: die Oboe"
+    blocks:
+      - type: example
+        title: Zu welcher Untergruppe gehört die Oboe?
+        blocks:
+          - type: text
+            text: |
+              1. Man bläst in die Oboe: Sie ist ein Blasinstrument.
+              2. Am Mundstück schwingt ein doppeltes Rohrblatt, nicht die Lippen.
+              3. Also ist die Oboe ein **Holzblasinstrument**.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: matching
+        id: tonerzeugung-zuordnen
+        text: Welche Untergruppe passt zur Art, wie der Ton entsteht?
+        pairs:
+          - { left: Saiten werden mit dem Bogen gestrichen, right: Streichinstrumente }
+          - { left: Saiten werden gezupft, right: Zupfinstrumente }
+          - { left: Luft an einer Kante oder ein Rohrblatt, right: Holzblasinstrumente }
+          - { left: Lippen schwingen im Mundstück, right: Blechblasinstrumente }
+        distractors: [Schlaginstrumente]
+        explanation: Saiten werden gestrichen oder gezupft; bei Blasinstrumenten entscheidet, was am Mundstück schwingt.
+        links:
+          - title: Streichinstrument (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Streichinstrument"
+      - type: generated
+        id: untergruppe-bestimmen
+        given:
+          i: { pick: 1, from: { data: instrumente } }
+        where:
+          - "i.gruppe == 'Saiteninstrument' or i.gruppe == 'Blasinstrument'"
+        task:
+          text: "Instrument: {{i.name}}. Zu welcher Untergruppe gehört es?"
+        answer:
+          value: "i.untergruppe"
+          compare: { choice: [Streichinstrument, Zupfinstrument, Holzblasinstrument, Blechblasinstrument] }
+        mistakes:
+          - value: "i.falsch"
+            message: "{{i.warum}}"
+        hint: "Frag dich: Was schwingt, und wie wird es zum Schwingen gebracht?"
+        steps:
+          - "{{i.warum}} Darum gehört es zu: {{answer}}."
+      - type: multiple-choice
+        id: holzblaeser-waehlen
+        text: Welche Instrumente sind Holzblasinstrumente? Wähle alle passenden.
+        options:
+          - text: Saxophon
+            correct: true
+            info: Aus Metall, aber ein Rohrblatt erzeugt den Ton.
+          - text: Querflöte
+            correct: true
+            info: Meist aus Metall, aber der Ton entsteht durch Luft an einer Kante.
+          - text: Fagott
+            correct: true
+            info: Beim Fagott schwingt ein doppeltes Rohrblatt.
+          - text: Waldhorn
+            correct: false
+            info: Beim Waldhorn schwingen die Lippen im Mundstück. Es ist ein Blechblasinstrument.
+          - text: Posaune
+            correct: false
+            info: Bei der Posaune schwingen die Lippen. Sie ist ein Blechblasinstrument.
+        explanation: Holzblasinstrumente erkennst du an der Tonerzeugung, nicht am Material.
+        links:
+          - title: Holzblasinstrument (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Holzblasinstrument"
+      - type: single-choice
+        id: harfe
+        text: Die Harfe hat viele Saiten. Zu welcher Untergruppe gehört sie?
+        options:
+          - text: Zupfinstrumente
+            correct: true
+            info: Die Saiten der Harfe werden mit den Fingern gezupft.
+          - text: Streichinstrumente
+            correct: false
+            info: Streichinstrumente werden mit einem Bogen gespielt. Die Harfe hat keinen Bogen.
+          - text: Blasinstrumente
+            correct: false
+            info: In ein Blasinstrument bläst man hinein. Die Harfe hat Saiten.
+        explanation: Saiten allein sagen noch nicht, ob gestrichen oder gezupft wird. Bei der Harfe wird gezupft.
+        links:
+          - title: Zupfinstrument (Wikipedia)
+            url: "https://de.wikipedia.org/wiki/Zupfinstrument"
+      - type: text
+        text: >-
+          Jetzt ordnest du Saiten- und Blasinstrumente nach ihrer Tonerzeugung. Als Nächstes kommen die übrigen vier
+          Gruppen: Tasten-, Schlag-, Harmonika- und elektronische Instrumente.

@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+format: 2
+strand: musik/klang
+title: "Orchesteraufbau: Instrumente und Sitzordnung"
+intro: >-
+  Du ordnest Instrumente danach, wie ihr Ton entsteht, lernst die Instrumente des Sinfonieorchesters kennen und weißt,
+  wo im Orchester wer sitzt. Am Ende zeigt dir die Selbsteinschätzung auf der Startseite, dein Probetest, was schon
+  sitzt.
+languages: [de]
+chapters: [orchester]
