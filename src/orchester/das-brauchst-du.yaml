@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du hier
+description: "Kurz wiederholt: Klangquellen und wie ein Klang durch Schwingung entsteht."
+recap: [musik/klangquellen-unterscheiden, musik/schwingung]
+blocks:
+  - type: text
+    text: >-
+      Kannst du das schon? **Ich kann Stimme, Körper, Gegenstände und Instrumente als Klangquellen unterscheiden.**
+      **Ich kann erklären, dass jeder Klang durch eine Schwingung entsteht.**
+  - type: text
+    text: >-
+      Zur Erinnerung: Ein Klang entsteht, wenn etwas schwingt, eine Saite, eine Luftsäule, ein Fell oder eine
+      Metallplatte. Die Schwingung kommt als Schall zu deinem Ohr. Bei Instrumenten zählt darum vor allem, **was**
+      schwingt und **wie** man es zum Schwingen bringt: streichen, zupfen, blasen, schlagen.
+  - type: text
+    text: >-
+      Prüf dich im Kopf: Was schwingt bei einer Gitarre, was bei einer Trommel? Wenn du es weißt, kannst du loslegen.
+      Genau danach ordnet diese App die Instrumente in Gruppen.

@@ -276,10 +276,11 @@ Keine Klänge, keine Bilder von Instrumenten, keine Band, kein Chor.
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 - [x] Musterseite orchester/sitzordnung: Sitzplan-SVG, labelled-figure mit Legende in der Regel, matching mit pairsFrom material, ordering, single-choice
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
-- [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
+- [x] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-- [ ] Kapitel orchester: Wiederholungsseite das-brauchst-du (recap klangquellen-unterscheiden, schwingung)
+      Creator: ja
+- [x] Kapitel orchester: Wiederholungsseite das-brauchst-du (recap klangquellen-unterscheiden, schwingung)
 - [ ] Seite orchester/saiten-und-blasinstrumente: Datendatei instrumente.yaml, Familien-Baum, generated Untergruppe, matching, multiple-choice, single-choice
 - [ ] Seite orchester/weitere-instrumente: generated Gruppe und tonerzeugend/geräuscherzeugend, matching Material, true-false
 - [ ] Seite orchester/instrumente-im-orchester: generated Orchester ja/nein, matching Orchestergruppe, multiple-choice, number; Selbsteinschätzung des Kapitels
